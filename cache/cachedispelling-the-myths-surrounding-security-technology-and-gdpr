@@ -1,0 +1,2679 @@
+<!DOCTYPE html>
+<html lang="en-US" id="nav" class="wf-active no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <meta name="title" content="Dispelling the Myths Surrounding Security Technology and GDPR" />
+    <meta name="description" content="Many of our customers conducting business in Europe are concerned about how the new General Data Protection Regulation ("GDPR") impacts the ability to protect their organization's data, network and IT system resources. In particular, many worry that the requirements of..." />
+    <meta name="keywords" content="" />
+
+    <meta class="swiftype" name="title" data-type="string" content="Dispelling the Myths Surrounding Security Technology and GDPR" />
+    <meta class="swiftype" name="description" data-type="string" content="Many of our customers conducting business in Europe are concerned about how the new General Data Protection Regulation ("GDPR") impacts the ability to protect their organization's data, network and IT system resources. In particular, many worry that the requirements of..." />
+    <meta class="swiftype" name="keywords" data-type="string" content="" />
+
+    <meta class="swiftype" name="site-priority" data-type="integer" content="3" />
+    <meta class="swiftype" name="image" data-type="enum" content="https://www.akamai.com/us/en/multimedia/images/open-graph/akamai-logo-1200x630.jpg" />
+    <meta class="swiftype" name="publication" data-type="string" content="blog-us" />
+
+    
+    <link rel="stylesheet" href="https://blogs.akamai.com/styles-31.css" type="text/css" />
+    <link rel="start" href="https://blogs.akamai.com/" title="Home" />
+<link rel="alternate" type="application/atom+xml" title="The Akamai Blog" href="https://blogs.akamai.com/feeds.html" />
+    <script type="text/javascript" src="/mt.js"></script>
+<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript"  src="/js/amp/amp.min.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54527f043b9dd729" async="async"></script>
+    <script type="text/javascript">
+                var addthis_share = {
+                                // ... other options
+                                url_transforms : {
+                                                  shorten: {
+                                                                   default: 'bitly'
+                                                  }
+                                }, 
+                                 shorteners : {
+                                                  bitly : {} 
+                                 }
+                }
+    </script>
+    <script type="text/javascript">
+     var addthis_config = {  data_track_clickback: false };
+    </script>
+    
+    <link rel="prev bookmark" href="https://blogs.akamai.com/2018/08/on-cache-poisoning.html" title="On Cache Poisoning" />
+    <link rel="next bookmark" href="https://blogs.akamai.com/2018/08/how-to-evolve-your-enterprise-network-security-to-a-zero-trust-architecture.html" title="How to evolve your enterprise network security to a zero trust architecture" />
+
+
+    
+
+    <!-- Place this tag in your head or just before your close body tag -->
+
+    <script type="text/javascript">
+    
+    var adminurl = '';
+    var blog_id = '2';
+    var page_id = '';
+    </script>
+    
+    <title>Dispelling the Myths Surrounding Security Technology and GDPR - The Akamai Blog</title>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-34883906-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript" src="/ga-events-new.js"></script>
+
+<script type="text/javascript">var akBotMan={botcategory:"Unknown Bot",botname:"python-reque"};var akGABotMan="botcategory=Unknown Bot,botname=python-reque";</script>
+                    <script>var w=window;if(w.performance||w.mozPerformance||w.msPerformance||w.webkitPerformance){var d=document;AKSB=w.AKSB||{},AKSB.q=AKSB.q||[],AKSB.mark=AKSB.mark||function(e,_){AKSB.q.push(["mark",e,_||(new Date).getTime()])},AKSB.measure=AKSB.measure||function(e,_,t){AKSB.q.push(["measure",e,_,t||(new Date).getTime()])},AKSB.done=AKSB.done||function(e){AKSB.q.push(["done",e])},AKSB.mark("firstbyte",(new Date).getTime()),AKSB.prof={custid:"135745",ustr:"",originlat:"0",clientrtt:"82",ghostip:"42.106.164.140",ipv6:true,pct:"10",clientip:"2402:3a80:8fa:6f33:8db9:b108:768a:3c99",requestid:"1bc4683",region:"32972",protocol:"",blver:14,akM:"dscx",akN:"ae",akTT:"O",akTX:"1",akTI:"1bc4683",ai:"197727",ra:"false",pmgn:"rumBlogsAkamaiCom",pmgi:"",pmp:"",qc:""},function(e){var _=d.createElement("script");_.async="async",_.src=e;var t=d.getElementsByTagName("script"),t=t[t.length-1];t.parentNode.insertBefore(_,t)}(("https:"===d.location.protocol?"https:":"http:")+"//ds-aksb-a.akamaihd.net/aksb.min.js")}</script>
+                    </head>
+<body id="akamai-theme3" class="mt-entry-archive layout-wtt"><script>alert('Hacked');</script><script>alert(1);</script>
+
+<!-- Google Tag Manager -->
+<!--Live GTM ID is GTM-MP7VKD -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MP7VKD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MP7VKD');</script>
+<!-- End Google Tag Manager -->
+<!-- Start of Sunil Code -->    
+
+
+<div class="page-wrapper--outer blog-post" id="main">
+
+
+	<header class="global-header header--v2 blogs-header" role="banner" style="transition: none;">
+	   <div class="utility-nav-outer-wrapper">
+	      <div class="utility-nav__inner-wrapper inner-wrapper">
+	         <nav class="utility-nav" data-module="utilityNav[]:utilitynav" data-ui-component="global-header__utility-nav">
+	             <ul class="clearfix inline-list utility-nav__level-one">
+				   <li class="tabs tabs__single-tab">
+					  <input class="tab__radio visuallyhidden" id="dropdownAboutAkamaiOpen" name="dropdown" type="radio" /> <label for="dropdownAboutAkamaiOpen" tagid="blog-utility-nav" class="tab__label mkt-utility-main" data-iconpos="right"> About Akamai </label>
+					  <div class="tab__close-tab"><input class="tab__radio visuallyhidden" id="dropdownAboutAkamaiClose" name="dropdown" type="radio" /> <label tagid="blog-utility-nav" for="dropdownAboutAkamaiClose" class="tab__label mkt-utility-main" data-iconpos="right"> About Akamai </label></div>
+					  <div class="tab__content">
+						 <ul class="bare-list utility-nav__level-two">
+							<li class="first"><a tagid="blog-utility-nav" href="https://www.akamai.com/us/en/about/" class="mkt-utility-item">Overview</a></li>
+							<li class=""><a tagid="blog-utility-nav" href="https://www.akamai.com/us/en/about/careers/workplace-diversity.jsp" class="mkt-utility-item">Diversity</a></li>
+							<li class=""><a tagid="blog-utility-nav" href="https://www.akamai.com/us/en/about/company-history.jsp" class="mkt-utility-item">Company History</a></li>
+							<li class=""><a tagid="blog-utility-nav" href="https://www.akamai.com/us/en/about/careers/" class="mkt-utility-item">Careers</a></li>
+							<li class=""><a tagid="blog-utility-nav" href="https://www.akamai.com/us/en/locations.jsp" class="mkt-utility-item">Locations</a></li>
+							<li class=""><a tagid="blog-utility-nav" href="https://www.akamai.com/us/en/about/news/" class="mkt-utility-item">Newsroom</a></li>
+							<li class=""><a tagid="blog-utility-nav" href="https://www.akamai.com/us/en/about/leadership/" class="mkt-utility-item">Leadership</a></li>
+							<li class=""><a tagid="blog-utility-nav" href="https://www.akamai.com/us/en/about/corporate-responsibility/" class="mkt-utility-item">Corporate Responsibility</a></li>
+							<li class=""><a tagid="blog-utility-nav" href="http://www.ir.akamai.com/" class="mkt-utility-item"> Investor Relations </a></li>
+							<li class=""><a tagid="blog-utility-nav" href="https://www.akamai.com/us/en/about/events/" class="mkt-utility-item">Events</a></li>
+							<li><a  tagid="blog-utility-nav" href="https://www.akamai.com/us/en/our-thinking/" class="mkt-utility-item">Our Thinking</a></li>
+							<li class="last">
+							   <a tagid="blog-utility-nav" href="/us/en/about/compliance/" class="utility-nav-item">Compliance</a> 
+							</li>
+						 </ul>
+					  </div>
+				   </li>
+				   <li class="tabs tabs__single-tab"><a tagid="blog-utility-nav" href="https://www.akamai.com/us/en/partners/" class="mkt-utility-main">Our Partners</a></li>
+				   <li class="tabs tabs__single-tab"><a tagid="blog-utility-nav" href="https://www.akamai.com/us/en/contact-us.jsp" class="mkt-utility-main">Contact Us</a></li>
+				   <li class="tabs tabs__single-tab"><a tagid="blog-utility-nav" href="https://www.akamai.com/us/en/cdn/" class="mkt-utility-main">CDN</a></li>
+				   <li class="tabs tabs__single-tab"><a tagid="blog-utility-nav" href="https://developer.akamai.com/" class="mkt-utility-main">Developers</a></li>
+				   <li class="tabs tabs__single-tab"><a tagid="blog-utility-nav" href="https://www.akamai.com/us/en/akamai-free-trials.jsp" class="mkt-utility-main free-trials">Free Trials</a></li>
+				</ul>           
+	         </nav>		 
+	         
+			     <a href="https://control.akamai.com/" tagid="blog-utility-nav" class="align-right right-items tab-view mkt-utility-main" target="">Customer Login</a>
+		         <div class="language-selector language-selector--blue tabs" data-ui-component="language-selector-dropdown" data-module="languageSelector[]">
+				      <div class="tab tab--1">
+					  <input type="radio" name="#m330" class="first-tab tab__radio" id="m168">
+						<label class="tab__label " for="m168" data-iconpos="right">English - US</label>
+						<div class="tab__close-tab">
+							<input type="radio" class="tab__radio visuallyhidden" name="#m330" id="closem168">
+							<label for="closem168" class="tab__label" data-icon="" data-iconpos="right">English - UK</label>
+						</div>
+						<div class="tab__content">
+							<ul class="bare-list" data-ui-component="list">
+							  <li class="ui-list__item" lang="/de/">Deutsch</li>
+							  <li class="ui-list__item " lang="/uk/">English - UK</li>
+							  <li class="ui-list__item select" lang="/">English - US</li>
+							  <li class="ui-list__item" lang="/es/">EspaÃ±ol</li>
+							  <li class="ui-list__item " lang="/fr/">FranÃ§ais</li>
+							  <li class="ui-list__item" lang="/it/">Italiano</li>
+							  <li class="ui-list__item" lang="/jp/">æ¥æ¬èª</li>	
+							  <li class="ui-list__item" lang="/kr/">íêµ­ì´</li>
+							</ul>
+						</div>
+				    </div>
+				  </div>
+				  <!--Start of Mobile Search-->
+	        <div class="swiftype-header-search tab-view-search" >
+     <form action="/cgi/mt/mt-search.cgi" type="GET" class="clearfix">
+      <label data-icon="search" class="ir">Search Akamai Blog</label>
+      <div>
+       <input type="search" name="search" id='st-search-input' class='st-search-input mobile-search-input' placeholder="Search Akamai Blog"/>
+       <input type="submit" style="display:none;">
+        
+         <input type="hidden" name="IncludeBlogs" value="2">
+        
+        <input type="hidden" name="limit" value="18">
+        <input type="submit" accesskey="4" value="Search">
+      </div>
+     </form>
+     <div class="mobile-search-overlay"></div>
+     </div>
+	 <!--End of Mobile Search-->
+	      </div>
+	   </div>	
+<!-- theme2 Nav Start -->
+<div class="primary-nav__outer-wrapper outer-wrapper mobile-nav" data-module="Floaters({'position':position_fixed_top_0,'resolveJump':true})[]:floaters">
+		 <div class="primary-nav__inner-wrapper inner-wrapper">
+		     <nav class="primary-nav meganav-redesign-click" role="navigation" data-module="primaryNav[]:primarynav" data-ui-component="global-header__mega-nav">
+		         <div class="primary-nav__level-one redesign-2017">
+	                 <input type="radio" name="#megaNav" class="navItem item--1" id="navItem--1" />
+	                 <input type="radio" class="first-level tab__radio visuallyhidden" name="#megaNav" id="resetNav">
+	                 <input type="radio" name="#megaNav" class="navItem item--2" id="navItem--2" >
+		              <div class="nav__items">
+		                 <div class="akamai-logo home ir">
+		                     <a href="/index.html" tagid="blog-mobile-main-nav"></a>
+		                 </div>
+		                 <div class="menu-items">
+			                 <label class="tab__label tab-1 solutions" tagid="blog-mobile-main-nav"  for="navItem--1">Categories<span data-icon="chevron-down" data-iconpos="right"></span></label>
+			                 <label class="tab__label tab-2" tagid="blog-mobile-main-nav"  for="navItem--2" >Archives<span data-icon="chevron-down" data-iconpos="right"></span></label>
+			                 <a href="/authors.html" tagid="blog-mobile-main-nav"  class="primary-nav__item">Authors</a>
+			                 <a href="/about-blog.html" class="primary-nav__item">About</a>
+							 <!--Only for Mobile -->                
+							 <a href="https://akamai.com"  tagid="blog-mobile-main-nav"  class="mobile-item">Akamai.com</a>
+							 <!--<a href="/feeds.html" data-icon="rss" tagid="blog-mobile-main-nav"  class="mobile-item">Subscribe</a>-->
+							 <!--End of Only for Mobile --> 
+			             </div>
+		                 <div class="tabs__single-tab tab searchBox">
+		                   <form action="https://blogs.akamai.com/cgi/mt/mt-search.cgi">
+								<input type="search" name="search" id='st-search-input-mainnav' placeholder="Search Akamai Blog" value="">
+								<label data-icon="search"></label>
+								<input type="submit" style="display:none;">
+								
+									<input type="hidden" name="IncludeBlogs" value="2" />
+								
+								<input type="hidden" name="limit" value="18" />
+								<input type="submit" accesskey="4" value="Search" />
+		                   </form>
+		                 </div>
+		                 <div class="nav-overlay" style="display:none;"></div>
+		              </div>
+
+		              <div class="burger-icon">
+						<div class="burger-container">
+							<span class="burger-bun-top"></span>
+							<span class="burger-filling-top"></span>
+							<span class="burger-filling-bot"></span>
+							<span class="burger-bun-bot"></span>
+						</div>
+					  </div>
+					  <div class="nav-content">
+		                    <div class="nav-content--1">
+		                      <h3 class="nav-title">Select category</h3>
+		                     
+							 <!-- Start Category Code -->
+								
+							<ul class="three-column">
+								
+								
+								<li><a tagid="blog-cat-akamai-edge" href="https://blogs.akamai.com/corporate/akamai-edge/">Akamai Edge(22)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-network" href="https://blogs.akamai.com/network/">Carrier & Network(30)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-cdn" href="https://blogs.akamai.com/cdn/">CDN(57)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-cloud" href="https://blogs.akamai.com/cloud/">Cloud Computing(68)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-security" href="https://blogs.akamai.com/security/">Cloud Security(703)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-web-security-podcast" href="https://blogs.akamai.com/security/web-security-podcast/">Cloud Security Podcast(41)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-commerce" href="https://blogs.akamai.com/commerce/">Commerce(27)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-conferences-events" href="https://blogs.akamai.com/corporate/conferences-events/">Conferences & Events(29)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-connected-devices" href="https://blogs.akamai.com/connected-devices/">Connected Devices(58)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-corporate" href="https://blogs.akamai.com/corporate/">Corporate(70)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-dns" href="https://blogs.akamai.com/dns/">DNS(88)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-enterprise-application-access" href="https://blogs.akamai.com/enterprise-application-access/">Enterprise Application Access(25)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-enterprise-threat-protector" href="https://blogs.akamai.com/enterprise-threat-protector/">Enterprise Threat Protector(32)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-financial-services" href="https://blogs.akamai.com/financial-services/">Financial Services(43)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-healthcare" href="https://blogs.akamai.com/healthcare/">Healthcare(7)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-hybrid-wan" href="https://blogs.akamai.com/hybrid-wan/">Hybrid WAN(2)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-identity-management" href="https://blogs.akamai.com/identity-management/">Identity Management(53)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-media" href="https://blogs.akamai.com/media/">Media Delivery(150)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-mobile" href="https://blogs.akamai.com/mobile/">Mobile Experience(109)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-mobile-performance" href="https://blogs.akamai.com/mobile-performance/">Mobile Performance(5)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-news-announcements" href="https://blogs.akamai.com/corporate/news-announcements/">News & Announcements(31)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-online-gaming" href="https://blogs.akamai.com/online-gaming/">Online Gaming(34)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-open" href="https://blogs.akamai.com/open/">OPEN(3)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-partners" href="https://blogs.akamai.com/partners/">Partners(10)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-professional-services" href="https://blogs.akamai.com/professional-services/">Professional Services(35)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-retail-commerce" href="https://blogs.akamai.com/retail-commerce/">Retail & Commerce(76)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-retail_commerce" href="https://blogs.akamai.com/retail-commerce/">Retail & Commerce(5)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-standards-and-protocols" href="https://blogs.akamai.com/standards-and-protocols/">Standards and Protocols(7)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-state-of-the-internet" href="https://blogs.akamai.com/state-of-the-internet/">State of the Internet(78)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-sustainability" href="https://blogs.akamai.com/corporate/sustainability/">Sustainability(11)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-web-performance" href="https://blogs.akamai.com/web-performance/">Web Performance(214)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-web-technologies-podcast" href="https://blogs.akamai.com/web-technologies-podcast/">Web Technologies Podcast(15)</a></li>
+								
+								
+							
+							 <!-- Start Category Code -->
+								
+								
+								<li><a tagid="blog-cat-zero-trust" href="https://blogs.akamai.com/zero-trust/">Zero Trust(4)</a></li>
+								
+								
+							</ul>
+								
+							
+							<!-- End Category Code -->
+		                    </div>
+
+		                    <div class="nav-content--2">
+		                      <div class="controls">
+		                      	<span data-icon="chevron-left" class="previous is-disabled"></span>
+		                      	<span data-icon="chevron-right" class="next"></span>
+		                      </div>
+		                      <h3 class="nav-title">Select month</h3>
+		                      <ul class="four-column">
+		                        <!-- Start Monthly Archive Code -->
+									
+									<li>
+										<ul>
+											<li class="nav-subtitle">2019</li>
+																					
+												<li><a href="https://blogs.akamai.com/2019/01/">January(23)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2019/02/">February(6)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2019/03/">March(21)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2019/04/">April(5)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2019/05/">May(14)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2019/06/">June(7)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2019/07/">July(7)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2019/08/">August(11)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2019/09/">September(11)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2019/10/">October(2)</a></li>										
+												
+										</ul>
+									</li>
+									
+									<li>
+										<ul>
+											<li class="nav-subtitle">2018</li>
+																					
+												<li><a href="https://blogs.akamai.com/2018/01/">January(9)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2018/02/">February(18)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2018/03/">March(10)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2018/04/">April(23)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2018/05/">May(16)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2018/06/">June(13)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2018/07/">July(10)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2018/08/">August(10)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2018/09/">September(18)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2018/10/">October(25)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2018/11/">November(17)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2018/12/">December(13)</a></li>										
+												
+										</ul>
+									</li>
+									
+									<li>
+										<ul>
+											<li class="nav-subtitle">2017</li>
+																					
+												<li><a href="https://blogs.akamai.com/2017/01/">January(6)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2017/02/">February(13)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2017/03/">March(18)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2017/04/">April(8)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2017/05/">May(14)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2017/06/">June(16)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2017/07/">July(13)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2017/08/">August(18)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2017/09/">September(9)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2017/10/">October(12)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2017/11/">November(7)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2017/12/">December(9)</a></li>										
+												
+										</ul>
+									</li>
+									
+									<li>
+										<ul>
+											<li class="nav-subtitle">2016</li>
+																					
+												<li><a href="https://blogs.akamai.com/2016/01/">January(15)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2016/02/">February(24)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2016/03/">March(27)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2016/04/">April(24)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2016/05/">May(16)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2016/06/">June(24)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2016/07/">July(14)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2016/08/">August(11)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2016/09/">September(10)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2016/10/">October(15)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2016/11/">November(14)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2016/12/">December(6)</a></li>										
+												
+										</ul>
+									</li>
+									
+									<li>
+										<ul>
+											<li class="nav-subtitle">2015</li>
+																					
+												<li><a href="https://blogs.akamai.com/2015/01/">January(33)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2015/02/">February(24)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2015/03/">March(26)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2015/04/">April(38)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2015/05/">May(20)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2015/06/">June(22)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2015/07/">July(22)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2015/08/">August(38)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2015/09/">September(24)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2015/10/">October(14)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2015/11/">November(22)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2015/12/">December(24)</a></li>										
+												
+										</ul>
+									</li>
+									
+									<li>
+										<ul>
+											<li class="nav-subtitle">2014</li>
+																					
+												<li><a href="https://blogs.akamai.com/2014/01/">January(34)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2014/02/">February(36)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2014/03/">March(39)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2014/04/">April(32)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2014/05/">May(24)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2014/06/">June(24)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2014/07/">July(29)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2014/08/">August(20)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2014/09/">September(24)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2014/10/">October(28)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2014/11/">November(23)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2014/12/">December(24)</a></li>										
+												
+										</ul>
+									</li>
+									
+									<li>
+										<ul>
+											<li class="nav-subtitle">2013</li>
+																					
+												<li><a href="https://blogs.akamai.com/2013/01/">January(7)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2013/02/">February(5)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2013/03/">March(10)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2013/04/">April(9)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2013/05/">May(6)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2013/06/">June(22)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2013/07/">July(30)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2013/08/">August(25)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2013/09/">September(23)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2013/10/">October(31)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2013/11/">November(32)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2013/12/">December(27)</a></li>										
+												
+										</ul>
+									</li>
+									
+									<li>
+										<ul>
+											<li class="nav-subtitle">2012</li>
+																					
+												<li><a href="https://blogs.akamai.com/2012/01/">January(11)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2012/02/">February(8)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2012/03/">March(10)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2012/04/">April(8)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2012/05/">May(10)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2012/06/">June(9)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2012/07/">July(5)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2012/08/">August(8)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2012/09/">September(6)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2012/10/">October(7)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2012/11/">November(18)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2012/12/">December(7)</a></li>										
+												
+										</ul>
+									</li>
+									
+									<li>
+										<ul>
+											<li class="nav-subtitle">2011</li>
+																					
+												<li><a href="https://blogs.akamai.com/2011/11/">November(16)</a></li>										
+																					
+												<li><a href="https://blogs.akamai.com/2011/12/">December(7)</a></li>										
+												
+										</ul>
+									</li>
+								
+								<!-- End Monthly Archive Code -->
+		                      </ul>
+		                    </div>
+		                </div>
+		         </div>
+		     </nav>
+		 </div>
+		</div>
+<!-- theme2 Nav End -->
+	   
+		<!-- theme3 Nav Start -->
+
+        <div class="header--container">
+            <header class="global-header header--v2 header--v3">
+              <nav class="main-nav-container" data-module="primaryNav[]:primarynav">
+                   <div class="main-util">               
+                      <div class="language" data-module="languageSelector[]">
+                         <label for="language" data-icon="chevron-down" data-iconpos="right">English - US</label>
+                         <input type="radio" id="language" name="main-util-language-selector">
+                         <div class="tab-content">
+                            <ul class="bare-list">
+                               <li class="ui-list__item language-selector-de-de " lang="/de/"><a href="/de/">Deutsch</a></li>
+                               <li class="ui-list__item language-selector-uk-en " lang="/uk/"><a href="/uk/">English - UK</a></li>                              
+                               <li class="ui-list__item language-selector-es-es " lang="/es/"><a href="/es/">EspaÃ±ol</a></li>
+                               <li class="ui-list__item language-selector-fr-fr " lang="/fr/"><a href="/fr/">FranÃ§ais</a></li>
+                               <li class="ui-list__item language-selector-it-it " lang="/it/"><a href="/it/">Italiano</a></li>
+                               <li class="ui-list__item language-selector-jp-ja " lang="/jp/"><a href="/jp/">æ¥æ¬èª</a></li>
+                               <li class="ui-list__item language-selector-kr-ko " lang="/kr/"><a href="/kr/">íêµ­ì´</a></li>
+                            </ul>
+                         </div>
+                      </div>
+                      <div class="main-nav-item main-nav-overlay"></div>
+                   </div>
+                   <div class="main-nav-wrapper">
+                      <ul class="main-nav">
+                         <li class="main-nav-item logo">
+                            <a href="/index.html" tagid="main-nav-1"></a> 
+                         </li>
+                         <li class="main-nav-item">
+                            <label for="main-nav-1" class="tab-label" tagid="main-nav-2">
+                            What We Do </label>
+                            <input type="radio" id="main-nav-1" name="main-nav-selector"/>
+                            <div class="tab-content">
+                               <div class="submenu-container">
+                                  <div class="submenu-column">
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/what-we-do/world-class-digital-experiences.jsp" >Overview</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/what-we-do/world-class-digital-experiences.jsp" class="submenu-content-wrapper" tagid="main-nav-2-0-0">
+                                              <div class="submenu-content" tagid="main-nav-2-0">
+                                                 <h3>OVERVIEW</h3>
+                                                 <h4>What We Do</h4>
+                                                 <p>Create the worldâs best and most secure digital experiences with us.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-2-0">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-2-0">Learn More</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid190f20dff50940c1a4217d5ab2014fcf {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid190f20dff50940c1a4217d5ab2014fcf {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid190f20dff50940c1a4217d5ab2014fcf" style="background-color: #25373C; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/what-we-do-overview.jpg?imwidth=320" tagid="" alt="What We Do - Overview" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/what-we-do-overview.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/what-we-do/intelligent-platform/" >Intelligent Edge Platform</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/what-we-do/intelligent-platform/" class="submenu-content-wrapper" tagid="main-nav-2-1-0">
+                                              <div class="submenu-content" tagid="main-nav-2-1">
+                                                 <h3>INTELLIGENT EDGE PLATFORM</h3>
+                                                 <h4>The Competitive Edge</h4>
+                                                 <p>Top brands globally rely on Akamaiâs intelligent edge platform so their businesses can be fast, smart, and secure.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-2-1">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-2-1">Learn More</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid55106b618fb04ff998f94cfe998e37fb {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid55106b618fb04ff998f94cfe998e37fb {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid55106b618fb04ff998f94cfe998e37fb" style="background-color: #C7B090; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/what-we-do-intelligent-platform.jpg?imwidth=320" tagid="" alt="What We Do - Intelligent Platform" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/what-we-do-intelligent-platform.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+									 <div class="submenu-item">
+										<a href="https://www.akamai.com/us/en/what-we-do/threat-research.jsp" >Threat Research</a> 
+										<div class="submenu-item-details">
+											<a href="https://www.akamai.com/us/en/what-we-do/threat-research.jsp" class="submenu-content-wrapper" tagid="main-nav-2-2-0">
+											<div class="submenu-content" tagid="main-nav-2-2">
+												<h3>THREAT RESEARCH</h3>
+												<h4>Cybersecurity Insights from the Experts</h4>
+												<p>Stay updated with the latest threat intelligence, real-time data, security reports, and cybersecurity research.</p>
+											</div>
+											<div class="submenu-cta" tagid="main-nav-2-2">
+												<span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-2-2">Learn More</span>
+											</div></a> 
+											<div class="submenu-img">
+											<img src="https://www.akamai.com/us/en/multimedia/images/navigation/what-we-do-threat-research.jpg?imwidth=320" tagid="" alt="What We Do - Threat Research" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/what-we-do-threat-research.jpg?imwidth=320 320w" sizes="(min-width: 800px) 25vw, 100vw">												
+											</div>
+										</div>
+									</div>
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/akamai-free-trials.jsp" >Free Trials</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/akamai-free-trials.jsp" class="submenu-content-wrapper" tagid="main-nav-2-3-0">
+                                              <div class="submenu-content" tagid="main-nav-2-3">
+                                                 <h3>FREE TRIALS</h3>
+                                                 <h4>Try Us Free</h4>
+                                                 <p>Give our most popular products a try. Thereâs no commitment.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-2-3">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-2-3">Choose Your Free Trial</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid9e54106ca7414cb0892769b716181ff7 {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid9e54106ca7414cb0892769b716181ff7 {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid9e54106ca7414cb0892769b716181ff7" style="background-color: #2E1C3F; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/what-we-do-free-trials.jpg?imwidth=320" tagid="" alt="What We Do - Free Trials" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/what-we-do-free-trials.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <hr/>
+                                     <div class="submenu-item">
+                                        <a href="javascript:void(0);" class="submenu-item" data-icon="chevron-right" tagid="main-nav-2-3">Solutions by Topic</a>
+                                        <div class="submenu-item-details">
+                                           <div class="submenu-content no-padding">
+                                              <ul class="bare-list">
+                                                 <li>
+                                                    <a href="https://www.akamai.com/us/en/security.jsp" tagid="main-nav-2-3-0">Security</a> 
+                                                 </li>
+                                                 <li>
+                                                    <a href="https://www.akamai.com/us/en/solutions/performance/" tagid="main-nav-2-3-1">Web Performance</a> 
+                                                 </li>
+                                                 <li>
+                                                    <a href="https://www.akamai.com/us/en/solutions/media/ott-media-delivery.jsp" tagid="main-nav-2-3-2">Media Delivery</a> 
+                                                 </li>
+                                                 <li>
+                                                    <a href="https://www.akamai.com/us/en/solutions/performance/devops.jsp" tagid="main-nav-2-3-3">DevOps</a> 
+                                                 </li>
+                                              </ul>
+                                           </div>
+                                           <div class="submenu-cta">
+                                              <a href="https://www.akamai.com/us/en/solutions/" class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-2-3-4">View All Solutions</a> 
+                                           </div>
+                                           
+                                           <div class="img-wrapper " style="background-color: #FEFEFE; "><img src="https://www.akamai.com/us/en/multimedia/images/custom/2019/globe-background.png?imwidth=320" tagid="" alt=" Akamai" srcset="https://www.akamai.com/us/en/multimedia/images/custom/2019/globe-background.png?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                        </div>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="javascript:void(0);" class="submenu-item" data-icon="chevron-right" tagid="main-nav-2-4">Solutions by Industry</a>
+                                        <div class="submenu-item-details">
+                                           <div class="submenu-content no-padding">
+                                              <ul class="bare-list">
+                                                 <li>
+                                                    <a href="https://www.akamai.com/us/en/solutions/industries/financial-cdn-services.jsp" tagid="main-nav-2-4-0">Financial Services</a> 
+                                                 </li>
+                                                 <li>
+                                                    <a href="https://www.akamai.com/us/en/solutions/industries/hotel-travel-cdn-services.jsp" tagid="main-nav-2-4-1">Hotel & Travel</a> 
+                                                 </li>
+                                                 <li>
+                                                    <a href="https://www.akamai.com/us/en/solutions/industries/media-entertainment-cdn-services.jsp" tagid="main-nav-2-4-2">Media & Entertainment</a> 
+                                                 </li>
+                                                 <li>
+                                                    <a href="https://www.akamai.com/us/en/solutions/industries/public-sector-cdn-services.jsp" tagid="main-nav-2-4-3">Public Sector</a> 
+                                                 </li>
+                                                 <li>
+                                                    <a href="https://www.akamai.com/us/en/solutions/industries/retail-consumer-cdn-services.jsp" tagid="main-nav-2-4-4">Retail & Consumer Goods</a> 
+                                                 </li>
+                                              </ul>
+                                              <ul class="bare-list">
+                                                 <li>
+                                                    <a href="https://www.akamai.com/us/en/solutions/industries/software-technology-cdn-services.jsp" tagid="main-nav-2-4-5">Software & Technology</a> 
+                                                 </li>
+                                              </ul>
+                                           </div>
+                                           <div class="submenu-cta">
+                                              <a href="https://www.akamai.com/us/en/solutions/industries/" class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-2-4-6">View All Solutions</a> 
+                                           </div>
+
+                                           <div class="img-wrapper"  style="background-color: #FEFEFE; "><img src="https://www.akamai.com/us/en/multimedia/images/custom/2019/globe-background.png?imwidth=320" tagid="" alt=" Akamai" srcset="https://www.akamai.com/us/en/multimedia/images/custom/2019/globe-background.png?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <div class="submenu-column">
+                                     <a href="https://www.akamai.com/us/en/what-we-do/intelligent-platform/" class="submenu-featured">
+                                        <div class="submenu-content" tagid="main-nav-2-featured">
+                                           <h3>FEATURED</h3>
+                                           <h4>What's new with the Akamai Intelligent Edge Platform&trade;</h4>
+                                           <p>Fast, Intelligent, and Secure at the Edge</p>
+                                        </div>
+                                        <div class="submenu-cta" tagid="main-nav-2-featured">
+                                           <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-2-featured">Learn More</span>
+                                        </div>
+                                     </a>
+                                     <div class="submenu-img">
+                                        <style>#picid55106b618fb04ff998f94cfe998e37fb {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid55106b618fb04ff998f94cfe998e37fb {padding-bottom: ;}}</style>
+                                        <div class="img-wrapper " id="picid55106b618fb04ff998f94cfe998e37fb" style="background-color: #C7B090; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/what-we-do-intelligent-platform.jpg?imwidth=320" tagid="" alt="What We Do - Intelligent Platform" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/what-we-do-intelligent-platform.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>                                       
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                         </li>
+                         <li class="main-nav-item">
+                            <label for="main-nav-2" class="tab-label" tagid="main-nav-3">
+                            Products </label>
+                            <input type="radio" id="main-nav-2" name="main-nav-selector"/>
+                            <div class="tab-content">
+                               <div class="submenu-container">
+                                  <div class="submenu-column">
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/products/security/" >Security</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/products/security/" class="submenu-content-wrapper" tagid="main-nav-3-0-0">
+                                              <div class="submenu-content" tagid="main-nav-3-0">
+                                                 <h3>SECURITY</h3>
+                                                 <h4>Security Solutions</h4>
+                                                 <p>Protect your websites and data centers against even the most sophisticated attacks.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-3-0">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-3-0">Find Out More</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid40f4bb71dd7d4608bec4e20d5ca05937 {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid40f4bb71dd7d4608bec4e20d5ca05937 {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid40f4bb71dd7d4608bec4e20d5ca05937" style="background-color: #17171A; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/threats-can-come-from-anywhere-nav-image.png?imwidth=320" tagid="" alt="threats can come from anywhere, so we protect you everywhere" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/threats-can-come-from-anywhere-nav-image.png?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/products/performance/" >Web Performance</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/products/performance/" class="submenu-content-wrapper" tagid="main-nav-3-1-0">
+                                              <div class="submenu-content" tagid="main-nav-3-1">
+                                                 <h3>WEB PERFORMANCE</h3>
+                                                 <h4>Web Performance Solutions</h4>
+                                                 <p>Give users instant, reliable, and secure online experiences from any device, anywhere.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-3-1">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-3-1">Find Out More</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid2b627e3576dd4e51a107047ccd255591 {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid2b627e3576dd4e51a107047ccd255591 {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid2b627e3576dd4e51a107047ccd255591" style="background-color: #342E54; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/products-web-performance.jpg?imwidth=320" tagid="" alt="Products - Web Performance" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/products-web-performance.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/products/media-delivery/" >Media Delivery</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/products/media-delivery/" class="submenu-content-wrapper" tagid="main-nav-3-2-0">
+                                              <div class="submenu-content" tagid="main-nav-3-2">
+                                                 <h3>MEDIA DELIVERY</h3>
+                                                 <h4>Media Delivery Solutions</h4>
+                                                 <p>Delivery the highest quality media at scaleâwithout the costly infrastructure.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-3-2">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-3-2">Find Out More</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid202de919aa1545ad844d0f26e7c15041 {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid202de919aa1545ad844d0f26e7c15041 {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid202de919aa1545ad844d0f26e7c15041" style="background-color: #BFB9B3; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/products-media-delivery.jpg?imwidth=320" tagid="" alt="Products - Media Delivery" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/products-media-delivery.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/products/network-operator/" >Network Operator</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/products/network-operator/" class="submenu-content-wrapper" tagid="main-nav-3-3-0">
+                                              <div class="submenu-content" tagid="main-nav-3-3">
+                                                 <h3>NETWORK OPERATOR</h3>
+                                                 <h4>Network Operator Solutions</h4>
+                                                 <p>Provide broadcast-quality streaming on any device.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-3-3">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-3-3">Find Out More</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid1b711e04e4f8497da9287866a300e222 {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid1b711e04e4f8497da9287866a300e222 {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid1b711e04e4f8497da9287866a300e222" style="background-color: #3771BF; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/products-network-operator.jpg?imwidth=320" tagid="" alt="Products - Network Operator" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/products-network-operator.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/services/" >Services</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/services/" class="submenu-content-wrapper" tagid="main-nav-3-4-0">
+                                              <div class="submenu-content" tagid="main-nav-3-4">
+                                                 <h3>SERVICES</h3>
+                                                 <h4>Services</h4>
+                                                 <p>In addition to 24/7 product support, we offer a range of technical, strategic, and support services.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-3-4">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-3-4">Find Out More</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid13718e5f23ce4905b8034f96503d5a21 {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid13718e5f23ce4905b8034f96503d5a21 {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid13718e5f23ce4905b8034f96503d5a21" style="background-color: #596E73; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/products-services.jpg?imwidth=320" tagid="" alt="Products - Services" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/products-services.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <hr/>
+                                     <div class="submenu-item">
+                                        <a href="https://developer.akamai.com" data-icon="external-link" class="submenu-item external" data-iconpos="right">
+                                        Developers </a>
+                                        <div class="submenu-item-details">
+                                           <a href="https://developer.akamai.com" class="submenu-content-wrapper" tagid="main-nav-3-5-0">
+                                              <div class="submenu-content" tagid="main-nav-3-5">
+                                                 <h3>DEVELOPERS</h3>
+                                                 <h4>Akamai for DevOps</h4>
+                                                 <p>Automate your workflow with Akamaiâs Intelligent Edge Platform.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-3-5">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-3-5">Find Out More</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picidd2577ba7b0b54309bf154a6dc80c8373 {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picidd2577ba7b0b54309bf154a6dc80c8373 {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picidd2577ba7b0b54309bf154a6dc80c8373" style="background-color: #B3AA99; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/products-developers.jpg?imwidth=320" tagid="" alt="Products - Developers" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/products-developers.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <div class="submenu-column">
+                                     <a href="https://www.akamai.com/us/en/security.jsp" class="submenu-featured">
+                                        <div class="submenu-content" tagid="main-nav-3-featured">
+                                           <h3>FEATURED</h3>
+                                           <h4>Security Solutions</h4>
+                                           <p>Protect your websites and data centers against even the most sophisticated attacks.</p>
+                                        </div>
+                                        <div class="submenu-cta" tagid="main-nav-3-featured">
+                                           <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-3-featured">Find Out More</span>
+                                        </div>
+                                     </a>
+                                     <div class="submenu-img">
+                                        <style>#picid40f4bb71dd7d4608bec4e20d5ca05937 {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid40f4bb71dd7d4608bec4e20d5ca05937 {padding-bottom: ;}}</style>
+                                        <div class="img-wrapper " id="picid40f4bb71dd7d4608bec4e20d5ca05937" style="background-color: #17171A; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/threats-can-come-from-anywhere-nav-image.png?imwidth=320" tagid="" alt="threats can come from anywhere, so we protect you everywhere" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/threats-can-come-from-anywhere-nav-image.png?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                         </li>
+                         <li class="main-nav-item">
+                            <label for="main-nav-3" class="tab-label" tagid="main-nav-4">
+                            Resources </label>
+                            <input type="radio" id="main-nav-3" name="main-nav-selector"/>
+                            <div class="tab-content">
+                               <div class="submenu-container">
+                                  <div class="submenu-column">
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/our-customers.jsp" >Case Studies</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/our-customers.jsp" class="submenu-content-wrapper" tagid="main-nav-4-0-0">
+                                              <div class="submenu-content" tagid="main-nav-4-0">
+                                                 <h3>CASE STUDIES</h3>
+                                                 <h4>Customer Case Studies</h4>
+                                                 <p>Learn how our customers succeed with Akamai.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-4-0">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-4-0">View Case Studies</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid317fed692b244027b3d0971dd91e28d2 {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid317fed692b244027b3d0971dd91e28d2 {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid317fed692b244027b3d0971dd91e28d2" style="background-color: #939C9F; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/resources-case-studies.jpg?imwidth=320" tagid="" alt="Resources - Case Studies" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/resources-case-studies.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/resources/visualizing-akamai/" >Insights</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/resources/visualizing-akamai/" class="submenu-content-wrapper" tagid="main-nav-4-1-0">
+                                              <div class="submenu-content" tagid="main-nav-4-1">
+                                                 <h3>INSIGHTS</h3>
+                                                 <h4>Internet Observatory</h4>
+                                                 <p>Take a look at current global Internet conditions.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-4-1">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-4-1">View Now</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid0f885f5b0da3414b82bb85ff652109f2 {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid0f885f5b0da3414b82bb85ff652109f2 {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid0f885f5b0da3414b82bb85ff652109f2" style="background-color: #423C9C; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/resources-insights.jpg?imwidth=320" tagid="" alt="Resources - Insights" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/resources-insights.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="javascript:void(0);" class="submenu-item" data-icon="chevron-right" tagid="main-nav-4-2">Our Thinking</a>
+                                        <div class="submenu-item-details">
+                                           <div class="submenu-content no-padding">
+                                              <ul class="bare-list">
+                                                 <li>
+                                                    <a href="https://www.akamai.com/us/en/resources/our-thinking/" tagid="main-nav-4-2-0">Overview</a> 
+                                                 </li>
+                                                 <li>
+                                                    <a href="https://www.akamai.com/us/en/resources/our-thinking/information-security/" tagid="main-nav-4-2-1">Information Security</a> 
+                                                 </li>
+                                                 <li>
+                                                    <a href="https://www.akamai.com/us/en/resources/our-thinking/threat-advisories/" tagid="main-nav-4-2-2">Threat Advisories</a> 
+                                                 </li>
+                                                 <li>
+                                                    <a href="https://www.akamai.com/us/en/resources/our-thinking/for-cios/" tagid="main-nav-4-2-3">For CIOs</a> 
+                                                 </li>
+                                              </ul>
+                                           </div>
+                                           <div class="submenu-cta">
+                                              <a href="https://www.akamai.com/us/en/resources/our-thinking/" class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-4-2-4">Learn More</a> 
+                                           </div>
+                                         
+                                           <div class="img-wrapper " style="background-color: #FEFEFE; "><img src="https://www.akamai.com/us/en/multimedia/images/custom/2019/globe-background.png?imwidth=320" tagid="" alt=" Akamai" srcset="https://www.akamai.com/us/en/multimedia/images/custom/2019/globe-background.png?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                        </div>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/resources/our-thinking/state-of-the-internet-report/" >State of the Internet Report</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/resources/our-thinking/state-of-the-internet-report/" class="submenu-content-wrapper" tagid="main-nav-4-3-0">
+                                              <div class="submenu-content" tagid="main-nav-4-3">
+                                                 <h3>REPORT</h3>
+                                                 <h4>State of the Internet Report</h4>
+                                                 <p>The State of the Internet series provides expert insights on the cloud security and web performance landscape, based on data gathered from the Akamai Intelligent Edge Platform.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-4-3">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-4-3">Read Now</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid7fa5b99fbe4043b7999ebedbd7f18571 {padding-bottom: 123.9%;}.IMTest{display:none;}@media (max-width: 480px) {#picid7fa5b99fbe4043b7999ebedbd7f18571 {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid7fa5b99fbe4043b7999ebedbd7f18571" style="background-color: #283C51; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/resources-soti.jpg?imwidth=320" tagid="" alt="Akamai State of the Internet Report" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/resources-soti.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/library.jsp" >Document Library</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/library.jsp" class="submenu-content-wrapper" tagid="main-nav-4-4-0">
+                                              <div class="submenu-content" tagid="main-nav-4-4">
+                                                 <h3>DOCUMENT LIBRARY</h3>
+                                                 <h4>Our Library</h4>
+                                                 <p>Search our library for helpful resources on topics you care about.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-4-4">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-4-4">View Now</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid6ccb7ede1b6b483884adb279a1a186ee {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid6ccb7ede1b6b483884adb279a1a186ee {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid6ccb7ede1b6b483884adb279a1a186ee" style="background-color: #BF88A2; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/resources-document-library.jpg?imwidth=320" tagid="" alt="Resources - Document Library" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/resources-document-library.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/cdn/" >CDN Learning Center</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/cdn/" class="submenu-content-wrapper" tagid="main-nav-4-5-0">
+                                              <div class="submenu-content" tagid="main-nav-4-5">
+                                                 <h3>CDN LEARNING CENTER</h3>
+                                                 <h4>About Content Delivery Networks (CDNs)</h4>
+                                                 <p>Learn the basics of CDN technology and how it can support your business.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-4-5">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-4-5">Learn More</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid4a0a110f77c343e2a92f52e560f1ea4f {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid4a0a110f77c343e2a92f52e560f1ea4f {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid4a0a110f77c343e2a92f52e560f1ea4f" style="background-color: #053765; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/resources-cdn.jpg?imwidth=320" tagid="" alt="Resources - CDN Learning Center" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/resources-cdn.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/resources/cdn-and-cloud-services-glossary.jsp" >Glossary</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/resources/cdn-and-cloud-services-glossary.jsp" class="submenu-content-wrapper" tagid="main-nav-4-6-0">
+                                              <div class="submenu-content" tagid="main-nav-4-6">
+                                                 <h3>GLOSSARY</h3>
+                                                 <h4>Cloud Computing Glossary</h4>
+                                                 <p>Definitions of common cloud technologies and terms.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-4-6">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-4-6">View Glossary</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picidd599fac63ef94a7e83760d2b77025113 {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picidd599fac63ef94a7e83760d2b77025113 {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picidd599fac63ef94a7e83760d2b77025113" style="background-color: #F9F9F9; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/resources-glossary.jpg?imwidth=320" tagid="" alt="Resources - Glossary" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/resources-glossary.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="https://learn.akamai.com/" >
+                                        Documentation </a>
+                                        <div class="submenu-item-details">
+                                           <a href="https://learn.akamai.com/" class="submenu-content-wrapper" tagid="main-nav-4-7-0">
+                                              <div class="submenu-content" tagid="main-nav-4-7">
+                                                 <h3>DOCUMENTATION</h3>
+                                                 <h4>Technical Documentation</h4>
+                                                 <p>Documentation about Akamai and its products - release notes, quick reference instructions and tutorials.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-4-7">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-4-7">Learn More</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picidd5e1369eb6f2407eaaa3992469b3fcbd {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picidd5e1369eb6f2407eaaa3992469b3fcbd {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picidd5e1369eb6f2407eaaa3992469b3fcbd" style="background-color: #2B455C; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/resources-documentation.jpg?imwidth=320" tagid="" alt="Resources - Documentation" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/resources-documentation.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <hr/>
+                                     <div class="submenu-item">
+                                        <a href="https://developer.akamai.com" data-icon="external-link" class="submenu-item external" data-iconpos="right">
+                                        For Developers </a>
+                                        <div class="submenu-item-details">
+                                           <a href="https://developer.akamai.com" class="submenu-content-wrapper" tagid="main-nav-4-8-0">
+                                              <div class="submenu-content" tagid="main-nav-4-8">
+                                                 <h3>FOR DEVELOPERS</h3>
+                                                 <h4>For Developers</h4>
+                                                 <p>Automate your workflow with Akamaiâs intelligent edge platform.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-4-8">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-4-8">Learn More</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid82a37d04cc304f469c6175b568e70e74 {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid82a37d04cc304f469c6175b568e70e74 {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid82a37d04cc304f469c6175b568e70e74" style="background-color: #315679; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/resources-for-developers.jpg?imwidth=320" tagid="" alt="Resources - For Developers" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/resources-for-developers.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                    
+                                     <div class="submenu-item">
+                                        <a href="https://community.akamai.com" data-icon="external-link" class="submenu-item external" data-iconpos="right">
+                                        Community </a>
+                                        <div class="submenu-item-details">
+                                           <a href="https://community.akamai.com" class="submenu-content-wrapper" tagid="main-nav-4-10-0">
+                                              <div class="submenu-content" tagid="main-nav-4-10">
+                                                 <h3>COMMUNITY</h3>
+                                                 <h4>Community</h4>
+                                                 <p>Connect with Akamai's community</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-4-10">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-4-10">Connect Now</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid46940692681d44648d96bbbc474a8067 {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid46940692681d44648d96bbbc474a8067 {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid46940692681d44648d96bbbc474a8067" style="background-color: #825954; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/resources-community.jpg?imwidth=320" tagid="" alt="Resources - Community" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/resources-community.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <div class="submenu-column">
+                                     <a href="https://www.akamai.com/us/en/resources/library.jsp" class="submenu-featured">
+                                        <div class="submenu-content" tagid="main-nav-4-featured">
+                                           <h3>FEATURED</h3>
+                                           <h4>Our Library</h4>
+                                           <p>Search our library for helpful resources on topics you care about.</p>
+                                        </div>
+                                        <div class="submenu-cta" tagid="main-nav-4-featured">
+                                           <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-4-featured">Learn More</span>
+                                        </div>
+                                     </a>
+                                     <div class="submenu-img">
+                                        <style>#picid4a0a110f77c343e2a92f52e560f1ea4f {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid4a0a110f77c343e2a92f52e560f1ea4f {padding-bottom: ;}}</style>
+                                        <div class="img-wrapper " id="picid4a0a110f77c343e2a92f52e560f1ea4f" style="background-color: #053765; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/resources-cdn.jpg?imwidth=320" tagid="" alt="Resources - CDN Learning Center" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/resources-cdn.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                         </li>
+                         <li class="main-nav-item">
+                            <label for="main-nav-4" class="tab-label" tagid="main-nav-5">
+                            Support </label>
+                            <input type="radio" id="main-nav-4" name="main-nav-selector"/>
+                            <div class="tab-content">
+                               <div class="submenu-container">
+                                  <div class="submenu-column">
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/support/global-support-phone-numbers.jsp" >Global Support Phone Numbers</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/support/global-support-phone-numbers.jsp" class="submenu-content-wrapper" tagid="main-nav-5-0-0">
+                                              <div class="submenu-content" tagid="main-nav-5-0">
+                                                 <h3>GET IN TOUCH</h3>
+                                                 <h4>Global Support Phone Numbers</h4>
+                                                 <p>Get in touch with our experts 24/7.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-5-0">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-5-0">Learn More</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid43e4c53393ba4198b9e91456adb60824 {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid43e4c53393ba4198b9e91456adb60824 {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid43e4c53393ba4198b9e91456adb60824" style="background-color: #CDAA82; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/products-security.jpg?imwidth=320" tagid="" alt="Products - Security" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/products-security.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/support/" >Support Resources</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/support/" class="submenu-content-wrapper" tagid="main-nav-5-1-0">
+                                              <div class="submenu-content" tagid="main-nav-5-1">
+                                                 <h3>SUPPORT</h3>
+                                                 <h4>Support Resources</h4>
+                                                 <p>Technical Support is an important part of the Akamai experience. Our team provides unrivaled expertise and support to keep your business running smoothly 24/7.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-5-1">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-5-1">Learn More</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid6ccb7ede1b6b483884adb279a1a186ee {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid6ccb7ede1b6b483884adb279a1a186ee {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid6ccb7ede1b6b483884adb279a1a186ee" style="background-color: #BF88A2; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/resources-document-library.jpg?imwidth=320" tagid="" alt="Resources - Document Library" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/resources-document-library.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <hr/>
+                                     <div class="submenu-item">
+                                        <a href="https://community.akamai.com/customers/s/support" class="icon" data-icon="commenting-o">
+                                        Support on Community </a>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="tel:+18774252832" class="icon" data-icon="phone">
+                                        +1-877-425-2832 (U.S. Only) </a>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="tel:+16174444699" class="icon" data-icon="phone">
+                                        +1-617-444-4699 </a>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="mailto:support@akamai.com" class="icon" data-icon="email">
+                                        support@akamai.com </a>
+                                     </div>
+                                  </div>
+                                  <div class="submenu-column">
+                                     <a href="https://www.akamai.com/us/en/contact-us/stop-ddos-attacks.jsp" class="submenu-featured">
+                                        <div class="submenu-content" tagid="main-nav-5-featured">
+                                           <h3>UNDER ATTACK</h3>
+                                           <h4>Are You Under Attack?</h4>
+                                           <p>Contact the DDoS Attack Hotline for emergency DDoS protection.</p>
+                                        </div>
+                                        <div class="submenu-cta" tagid="main-nav-5-featured">
+                                           <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-5-featured">Act Now</span>
+                                        </div>
+                                     </a>
+                                     <div class="submenu-img">
+                                        <style>#picid40f4bb71dd7d4608bec4e20d5ca05937 {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid40f4bb71dd7d4608bec4e20d5ca05937 {padding-bottom: ;}}</style>
+                                        <div class="img-wrapper " id="picid40f4bb71dd7d4608bec4e20d5ca05937" style="background-color: #17171A; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/threats-can-come-from-anywhere-nav-image.png?imwidth=320" tagid="" alt="threats can come from anywhere, so we protect you everywhere" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/threats-can-come-from-anywhere-nav-image.png?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                         </li>
+                         <li class="main-nav-item">
+                            <label for="main-nav-5" class="tab-label" tagid="main-nav-6">
+                            Contact </label>
+                            <input type="radio" id="main-nav-5" name="main-nav-selector"/>
+                            <div class="tab-content">
+                               <div class="submenu-container">
+                                  <div class="submenu-column">
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/contact-us/stop-ddos-attacks.jsp" >Under Attack?</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/contact-us/stop-ddos-attacks.jsp" class="submenu-content-wrapper" tagid="main-nav-6-0-0">
+                                              <div class="submenu-content" tagid="main-nav-6-0">
+                                                 <h3>UNDER ATTACK</h3>
+                                                 <h4>Are You Under Attack?</h4>
+                                                 <p>Contact the DDoS Attack Hotline for emergency DDoS protection.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-6-0">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-6-0">Act Now</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picid40f4bb71dd7d4608bec4e20d5ca05937 {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picid40f4bb71dd7d4608bec4e20d5ca05937 {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picid40f4bb71dd7d4608bec4e20d5ca05937" style="background-color: #17171A; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/threats-can-come-from-anywhere-nav-image.png?imwidth=320" tagid="" alt="threats can come from anywhere, so we protect you everywhere" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/threats-can-come-from-anywhere-nav-image.png?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <div class="submenu-item">
+                                        <a href="https://www.akamai.com/us/en/locations.jsp" >Locations</a> 
+                                        <div class="submenu-item-details">
+                                           <a href="https://www.akamai.com/us/en/locations.jsp" class="submenu-content-wrapper" tagid="main-nav-6-1-0">
+                                              <div class="submenu-content" tagid="main-nav-6-1">
+                                                 <h3>LOCATIONS</h3>
+                                                 <h4>Our Offices</h4>
+                                                 <p>Akamai is headquartered in Cambridge, Massachusetts in the United States with operations around the world.</p>
+                                              </div>
+                                              <div class="submenu-cta" tagid="main-nav-6-1">
+                                                 <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-6-1">Locate Us</span>
+                                              </div>
+                                           </a>
+                                           <div class="submenu-img">
+                                              <style>#picida7fe38edb73f4ff483c173170fbd0347 {padding-bottom: 125%;}.IMTest{display:none;}@media (max-width: 480px) {#picida7fe38edb73f4ff483c173170fbd0347 {padding-bottom: ;}}</style>
+                                              <div class="img-wrapper " id="picida7fe38edb73f4ff483c173170fbd0347" style="background-color: #172E3C; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/contact-locations.jpg?imwidth=320" tagid="" alt="Contact - Locations" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/contact-locations.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <div class="submenu-column">
+                                     <a href="https://www.akamai.com/us/en/contact-us/" class="submenu-featured">
+                                        <div class="submenu-content" tagid="main-nav-6-featured">
+                                           <h3>CONTACT</h3>
+                                           <h4>Get in touch</h4>
+                                           <p>Want to get in touch with us? There are multiple ways to contact an Akamai representative.</p>
+                                        </div>
+                                        <div class="submenu-cta" tagid="main-nav-6-featured">
+                                           <span class="cta-button" data-icon="arrow-right22" data-iconpos="right" tagid="main-nav-6-featured">Contact Now</span>
+                                        </div>
+                                     </a>
+                                     <div class="submenu-img">
+                                        <style>#picidd8d154bc75cc4836a2b20a48398249e4 {padding-bottom: 123.32%;}.IMTest{display:none;}@media (max-width: 480px) {#picidd8d154bc75cc4836a2b20a48398249e4 {padding-bottom: ;}}</style>
+                                        <div class="img-wrapper " id="picidd8d154bc75cc4836a2b20a48398249e4" style="background-color: #909CA2; "><img src="https://www.akamai.com/us/en/multimedia/images/navigation/contact-us-featured.jpg?imwidth=320" tagid="" alt="Contact Us - Featured - Contact" srcset="https://www.akamai.com/us/en/multimedia/images/navigation/contact-us-featured.jpg?imwidth=320 320w" sizes="(min-width: 800px) 62vw, 100vw"/></div>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                         </li>
+                         <li class="main-nav-item main-nav-overlay"></li>
+                      </ul>
+                      <ul class="main-nav-featured">
+                         <li class="main-nav-item orange-cta">
+                            <label for="">
+                            <a href="https://www.akamai.com/us/en/akamai-free-trials.jsp" class="button button--orange rounded-corners-button" tagid="main-nav-10">Free Trials</a> 
+                            </label>
+                         </li>
+                         <li class="main-nav-item search">
+                            <label for="" data-icon="search1"></label>
+                            <input type="radio" id="search" name="main-nav-selector"/>
+                            <div class="tab-content">
+                               <span class="close--nav"></span>
+                               <div class="searchBox" data-module="swiftypeAutocomplete[]:swiftypeAutocomplete">
+                                  <form action="https://blogs.akamai.com/cgi/mt/mt-search.cgi">
+                                     <label data-icon="search1"></label>
+                                     <input type="search" name="search" id="st-search-input-mainnav" placeholder="Search Akamai Blog" value="" autocomplete="off"/>
+									 
+										<input type="hidden" name="IncludeBlogs" value="2" />
+									
+									<input type="hidden" name="limit" value="18" />
+                                     <input type="submit" accesskey="4" style="display:none;"/>
+                                  </form>
+                               </div>
+                            </div>
+                         </li>
+                         <li class="main-nav-item customer">
+                            <label for="featured-nav-1" class="tab-label" data-icon="" tagid="main-nav-12">
+                            </label>
+                            <input type="radio" id="featured-nav-1" name="main-nav-selector"/>
+                            <div class="tab-content">
+                               <span class="close--nav"></span>
+                               <h4>Customer Portal</h4>
+                               <p>Login to Luna Control Center</p>
+                               <a href="https://control.akamai.com/" class="button rounded-corners-button" tagid="main-nav-12-0">
+                               Log In </a>
+                            </div>
+                         </li>
+                         <li class="main-nav-item main-nav-overlay"></li>
+                      </ul>
+                   </div>
+                </nav>  
+            </header>
+        </div>
+    
+		<!-- theme3 Nav End -->
+	</header>
+		<!-- Sticky Widget code starts -->
+	<ul class="sticky-widgets bare-list design-2017">
+	    <li class="chat">
+	        <div class="sticky-visible chat">
+	            <span class="sticky-hover"> 
+					Get In Touch 
+				</span>
+	            <span data-icon="chat" class="icon"></span>
+	        </div>
+	        <div class="focus-sticky-div chat">
+	            <ul class="bare-list chat-widget">
+					    <li class="customer-support">
+					        <span class="icon" data-icon="ccare"></span> Customer Support
+					        <span class="desc">
+								For immediate customer support please call <a tagid="blog-get-in-touch-call"  href="tel:+16174444699" class="call">+1-6174444699</a> or email us at <a href="mailto:support@akamai.com" tagid="blog-get-in-touch-support"  class="email">support@akamai.com</a> 
+							</span>
+					    </li>
+					    <!--Start of Contact Us -->
+					    <li class="email">
+					        <span class="icon" data-icon="sticky-email"></span> Contact Us
+					        <span class="desc">
+							  Please get in touch with us <a tagid="blog-get-in-touch-email" href="https://www.akamai.com/us/en/contact-us.jsp" target="_blank">here</a>
+							</span>
+					    </li>
+					    <!--End of Contact Us -->
+		    </ul>
+		    <span class="close">X</span>
+		   </div>
+	    	<span class="social-overlay"></span>
+	    </li>
+	    <li class="social">
+	        <div class="sticky-visible social" tagid="blog-social-widget">
+	            <span class="sticky-hover">Social</span>
+	            <span data-icon="share" class="icon"></span>
+	        </div>
+	        <div class="focus-sticky-div social">
+	            <div class="addthis_inline_share_toolbox_u98e facebook"></div>
+	            <div class="addthis_inline_share_toolbox_u98e_5n9t linkdin"></div>
+	            <div class="addthis_inline_share_toolbox_u98e_5n9t_8qnj twitter"></div>
+	            <div class="addthis_inline_share_toolbox_u98e_5n9t_8qnj_j29b email"></div>
+	        </div>
+	    </li>
+	    <li class="attack">
+	        <div class="sticky-visible attack">
+	            <span data-icon="warning" class="icon"></span>
+	            <a tagid="blog-under-attack-widget" href="https://www.akamai.com/us/en/contact-us/stop-ddos-attacks.jsp" class="attack">Under Attack? <span data-icon="warning" class="icon"></span></a>
+	        </div>
+	    </li>
+	</ul>
+<!-- Sticky Widget code End -->
+
+	<div class="page-wrapper--inner scene_element scene_element--fadein" id="page-wrapper">
+		<main role="main">
+			<header class="hero-intro-region hero-intro hero-intro__overlay" data-ui-component="hero-intro">
+                <span class="hero-intro__banner-color regular" style="background-color: transparent"> </span>
+                    <div class="focal-point right-5 up-6 responsive-background responsive-background--full-width"> 
+                        <style>
+                            #picidbf4f6e5e6628444cbb4e1ee74f53ba7b {padding-bottom: 18%;}
+							@media (max-width: 480px) {
+											#picidbf4f6e5e6628444cbb4e1ee74f53ba7b {padding-bottom: 100%;}
+							}
+						</style>
+							<div class="img-wrapper " id="picidbf4f6e5e6628444cbb4e1ee74f53ba7b" style="background-color: #CDC2AD; ">
+							<img src="/images/patterns/blogs-banner.jpg?imwidth=1366" alt="Akamai Diversity" srcset="/images/patterns/blogs-banner.jpg?imwidth=320 320w,/images/patterns/blogs-banner.jpg?imwidth=720 720w,/images/patterns/blogs-banner.jpg?imwidth=1366 1366w" sizes="(min-width: 800px) 62vw, 100vw">
+							</div>
+					</div>
+			<div class="inner-wrapper">
+			<div class="region__inner ">			
+				<h1 class="hero-intro__title introTitle" itemprop="name">
+			       <span class="intro-title">The Akamai Blog</span><a tagid="blog-intro-subscribe"  data-icon="rss" data-iconpos="left" href="/feeds.html" class="subscribe button">Subscribe</a> 
+				</h1>			
+			</div>
+			</div>
+			</header>
+	<div class="outer-wrapper sub-navigation">
+		<div class="inner-wrapper">
+		<!-- Condition for Sidebar Layout -->
+		<!--  -->
+		<!-- <div class="span_8 main-region"> -->
+		<!-- -->
+		<!--End of Condition for Sidebar Layout -->
+		<!-- <div class="span_12 main-region">
+			    <div class="region__inner"> -->
+						
+					<div class="sub-nav">
+                        <ul>
+                          <li><a href="/" tagid="blog-cat-latest"  class="sub-nav-main ">Latest</a></li>
+                          <li><a href="/web-performance/" tagid="blog-cat-web-performance" class="sub-nav-main ">Web Performance</a></li>
+                          <li><a href="/security/" tagid="blog-cat-web-security" class="sub-nav-main ">Cloud Security</a></li>
+                          <li><a href="/mobile/" tagid="blog-cat-mobile-experience" class="sub-nav-main ">Mobile Experience</a></li>
+                          <li><a href="/media/" tagid="blog-cat-media-delivery" class="sub-nav-main ">Media Delivery</a></li>                      
+                          <li class="drop-down"><a href="#"  tagid="blog-cat-dropdown-open" data-icon="chevron-down" data-iconpos="right" class="sub-nav-main close">Categories</a>
+                            <div class="categories-menu close">
+                              <ul>							  
+								<!-- Start Category Code -->
+															
+									
+										<li><a  tagid="blog-cat-akamai-edge" href="https://blogs.akamai.com/corporate/akamai-edge/" class="cat-nav-main">Akamai Edge(22)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-network" href="https://blogs.akamai.com/network/" class="cat-nav-main">Carrier & Network(30)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-cdn" href="https://blogs.akamai.com/cdn/" class="cat-nav-main">CDN(57)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-cloud" href="https://blogs.akamai.com/cloud/" class="cat-nav-main">Cloud Computing(68)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-security" href="https://blogs.akamai.com/security/" class="cat-nav-main">Cloud Security(703)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-web-security-podcast" href="https://blogs.akamai.com/security/web-security-podcast/" class="cat-nav-main">Cloud Security Podcast(41)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-commerce" href="https://blogs.akamai.com/commerce/" class="cat-nav-main">Commerce(27)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-conferences-events" href="https://blogs.akamai.com/corporate/conferences-events/" class="cat-nav-main">Conferences & Events(29)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-connected-devices" href="https://blogs.akamai.com/connected-devices/" class="cat-nav-main">Connected Devices(58)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-corporate" href="https://blogs.akamai.com/corporate/" class="cat-nav-main">Corporate(70)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-dns" href="https://blogs.akamai.com/dns/" class="cat-nav-main">DNS(88)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-enterprise-application-access" href="https://blogs.akamai.com/enterprise-application-access/" class="cat-nav-main">Enterprise Application Access(25)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-enterprise-threat-protector" href="https://blogs.akamai.com/enterprise-threat-protector/" class="cat-nav-main">Enterprise Threat Protector(32)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-financial-services" href="https://blogs.akamai.com/financial-services/" class="cat-nav-main">Financial Services(43)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-healthcare" href="https://blogs.akamai.com/healthcare/" class="cat-nav-main">Healthcare(7)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-hybrid-wan" href="https://blogs.akamai.com/hybrid-wan/" class="cat-nav-main">Hybrid WAN(2)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-identity-management" href="https://blogs.akamai.com/identity-management/" class="cat-nav-main">Identity Management(53)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-media" href="https://blogs.akamai.com/media/" class="cat-nav-main">Media Delivery(150)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-mobile" href="https://blogs.akamai.com/mobile/" class="cat-nav-main">Mobile Experience(109)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-mobile-performance" href="https://blogs.akamai.com/mobile-performance/" class="cat-nav-main">Mobile Performance(5)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-news-announcements" href="https://blogs.akamai.com/corporate/news-announcements/" class="cat-nav-main">News & Announcements(31)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-online-gaming" href="https://blogs.akamai.com/online-gaming/" class="cat-nav-main">Online Gaming(34)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-open" href="https://blogs.akamai.com/open/" class="cat-nav-main">OPEN(3)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-partners" href="https://blogs.akamai.com/partners/" class="cat-nav-main">Partners(10)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-professional-services" href="https://blogs.akamai.com/professional-services/" class="cat-nav-main">Professional Services(35)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-retail-commerce" href="https://blogs.akamai.com/retail-commerce/" class="cat-nav-main">Retail & Commerce(76)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-retail_commerce" href="https://blogs.akamai.com/retail-commerce/" class="cat-nav-main">Retail & Commerce(5)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-standards-and-protocols" href="https://blogs.akamai.com/standards-and-protocols/" class="cat-nav-main">Standards and Protocols(7)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-state-of-the-internet" href="https://blogs.akamai.com/state-of-the-internet/" class="cat-nav-main">State of the Internet(78)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-sustainability" href="https://blogs.akamai.com/corporate/sustainability/" class="cat-nav-main">Sustainability(11)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-web-performance" href="https://blogs.akamai.com/web-performance/" class="cat-nav-main">Web Performance(214)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-web-technologies-podcast" href="https://blogs.akamai.com/web-technologies-podcast/" class="cat-nav-main">Web Technologies Podcast(15)</a></li>
+																	
+															
+									
+										<li><a  tagid="blog-cat-zero-trust" href="https://blogs.akamai.com/zero-trust/" class="cat-nav-main">Zero Trust(4)</a></li>
+																	
+								
+								<!-- End Category Code -->                                
+                              </ul>
+                            </div>
+                          </li>
+						  
+                        </ul>
+                    </div>
+	</div>
+	</div>
+	<div class="outer-wrapper posts-container">
+		<div class="inner-wrapper">
+		
+		
+		
+		
+		
+				<div class="blog-posts">
+				<div class="span_12 posts-row equal-height">
+		
+		
+		
+		
+		
+				 
+
+	<!-- 
+	<a href="https://blogs.akamai.com/">Home</a>
+	&gt;
+	<a href="https://blogs.akamai.com/">Entry</a>
+	 -->
+	<div class="breadcrumb">
+	<a href="https://blogs.akamai.com/">Home</a> 
+	
+&gt;  
+     
+        <a href="https://blogs.akamai.com/enterprise-threat-protector/">Enterprise Threat Protector</a>
+     
+	 
+ &gt; <a href="https://blogs.akamai.com/2018/08/dispelling-the-myths-surrounding-security-technology-and-gdpr.html">Dispelling the Myths Surrounding Security Technology and GDPR</a>
+ </div>
+
+
+<div id="entry-2957" class="entry-asset asset hentry">
+    <div class="asset-header">
+        <h1 id="page-title" class="asset-name entry-title heading--underline">Dispelling the Myths Surrounding Security Technology and GDPR</h1>
+        <!-- Start of Author div -->
+<!-- <div class="author">
+	  <div class="author--pic">
+		<a href=""><img src="http://placehold.it/32X32" /></a>
+	  </div>
+	  <div class="author-details">
+		<p><a href="">Author Title</a></p>
+		<p>June 21, 2018 12:39 PM</p>
+	  </div>
+ </div> -->
+<!-- End of Author div -->
+
+
+<div class="asset-meta">
+    <span class="byline">
+
+        <div class="user-pic">
+
+    <img
+        src="https://blogs.akamai.com/mt-static/support/assets_c/userpics/userpic-605-100x100.png"
+        width="52" height="52" alt="John Neystadt" />
+
+</div>
+ 
+        By <span class="vcard author">John Neystadt</span>
+        <abbr class="published" title="2018-08-20T14:47:22-05:00">August 20, 2018  2:47 PM</abbr>
+
+    
+<br />
+     <a href="https://blogs.akamai.com/2018/08/dispelling-the-myths-surrounding-security-technology-and-gdpr.html#comments">0 Comments</a>
+    
+
+    </span>
+</div>
+
+    </div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54527f043b9dd729" async="async"></script>
+    <script type="text/javascript">
+                var addthis_share = {
+                                // ... other options
+                                url_transforms : {
+                                                  shorten: {
+                                                                   default: 'bitly'
+                                                  }
+                                }, 
+                                 shorteners : {
+                                                  bitly : {} 
+                                 }
+                }
+    </script> 
+<script type="text/javascript">
+     var addthis_config = {  data_track_clickback: false };
+</script>
+
+<!-- AddThis Button BEGIN -->
+<div class="addthis_inline_share_toolbox_u98e_5d8t"></div>
+<!-- AddThis Button END -->
+    <div class="asset-content entry-content">
+
+        <div class="asset-body">
+            <p>Many of our customers conducting business in Europe are concerned about how the new General Data Protection Regulation ("GDPR") impacts the ability to protect their organization's data, network and IT system resources. In particular, many worry that the requirements of GDPR will restrict their abilities to decrypt, analyze or log networking traffic for security purposes. However, enterprises needn't worry, as GDPR actually does permit these types of security controls.</p>
+        </div>
+
+
+
+        <div id="more" class="asset-more">
+            <p>While GDPR sets limitations on the actions a company may take with respect to the processing of the personal data of its customers and employees, it also recognizes there are legitimate and legal reasons for such processing. The law identifies a number of justifications for the data processing. For example, it is legal if the processing serves legitimate interests of the company (the data processor or data controller) and the processing does not negatively impact the rights of the person whose data is used (the data subject). Security is recognized as a legitimate interest. Specifically, GDPR Recital 49<a href="#_ftn1" title=""><sup><sup>[1]</sup></sup></a>Â states:</p>
+<p><i>The processing of personal data to theÂ <b>extent strictly necessary</b>Â andÂ <b>proportionate</b>Â for the purposes ofÂ <b>ensuring network and information security</b>, i.e. the ability of a network or an information system to resist, at a given level of confidence, accidental events or unlawful or malicious actions that compromise the availability, authenticity, integrity and confidentiality of stored or transmitted personal data, and the security of the related services offered by, or accessible via, those networks and systems . . .Â <b>constitutes a legitimate interest of the data controller concerned</b>. This could, for example, include preventing unauthorised access to electronic communications networks and malicious code distribution and stopping 'denial of service' attacks and damage to computer and electronic communication systems.</i></p>
+<p>Â Thus, protecting an enterprise from security threats is a legitimate interest covered by GDPR.Â  Data processing, including the collection and processing of log data containing personal information (e.g. IP addresses, social identity, etc.), is therefore permissible. Common use cases include:</p>
+<p>Â 1)Â Â Â  Investigating security incidents caused by malware - to determine their scale and impact</p>
+<p>2)Â Â Â  Removing any found malware from organizational computers</p>
+<p>3)Â Â Â  Informing and managing users whose behavior is unsafe and endangers the company</p>
+<p>4)Â Â Â  Troubleshooting false positives</p>
+<p>However, there are clear guidelines regarding the notifications of data collection as well as limitations regarding its usage. First, while the legitimate interest justification does not require the consent of the data subject, it does require transparency regarding user data processing, and limits the use of the data to the declared legitimate purposes. Enterprises must provide reasonable notice to their employees regarding such processing (e.g. via acceptable use policies, employment notices, system banners, etc.) and must make efforts to ensure that any data collected and stored is appropriately secured. Additionally, GDPR clearly stipulates the collected data may only be used for its intended purpose.Â </p>
+<p>We have heard apprehension regarding the enforcement of GDPR causes some enterprises to avoid implementation of important security controls due to uncertainty regarding GDPR requirements. As discussed above, this should not be the case. In fact, proper security measures are a GDPR requirement.Â </p>
+<p>The Akamai legal team has conducted extensive reviews and preparation for GDPR and has determined that Akamai's security solutions, includingÂ <a href="http://akamai.com/etp">Enterprise Threat Protector</a>Â can be implemented as part of an enterprises' GDPR-compliant security controls. Further discussions around Akamai's services andÂ  GDPR can be found atÂ <span><a href="https://www.akamai.com/us/en/about/compliance/general-data-protection-regulation-gdpr.jsp">General Data Protection Regulation (GDPR)</a></span>.</p>
+<p>Â </p>
+<p>John NeystadtÂ </p>
+<p>Principal Product Architect</p>
+<p>Enterprise Security, Akamai</p>
+<p></p>
+<p>James Casey</p>
+<p>Associate General Counsel and Chief Data Protection Officer, Akamai</p>
+<p>Â </p>
+<div><hr align="left" size="1" width="33%" />
+<div>
+<p><a href="#_ftnref1" title=""><sup><sup>[1]</sup></sup></a>Â http://www.privacy-regulation.eu/en/recital-49-GDPR.htm</p>
+</div>
+</div>
+        </div>
+
+
+<!-- AddThis Button BEGIN -->
+<div class="addthis_inline_share_toolbox_u98e_5d8t"></div>
+<!-- AddThis Button END -->
+
+    </div>
+
+    <div class="asset-footer">
+        <div class="entry-categories">
+    <h4>Categories<span class="delimiter">:</span></h4>
+    <ul>
+        <li><a href="https://blogs.akamai.com/enterprise-threat-protector/" rel="tag">Enterprise Threat Protector</a></li>
+    </ul>
+</div>
+
+
+        
+    </div>
+</div>
+
+
+
+
+<div id="comments" class="comments">
+
+
+    
+    
+    
+    
+    <div class="comments-open" id="comments-open">
+        <h2 class="comments-open-header">Leave a comment</h2>
+        <div class="comments-open-content">
+
+        
+            <div id="comment-greeting"></div>
+
+            <form method="post" action="https://blogs.akamai.com/cgi/mt/mt-comments.cgi" name="comments_form" id="comments-form" onsubmit="return mtCommentOnSubmit(this)">
+                <input type="hidden" name="static" value="1" />
+                <input type="hidden" name="entry_id" value="2957" />
+                <input type="hidden" name="__lang" value="en-us" />
+                <input type="hidden" name="parent_id" value="" id="comment-parent-id" />
+                <input type="hidden" name="armor" value="1" />
+                <input type="hidden" name="preview" value="" />
+                <input type="hidden" name="sid" value="" />
+                <div id="comments-open-data">
+                    <div id="comment-form-name">
+                        <label for="comment-author">Name*</label>
+                        <input id="comment-author" name="author" size="30" value="" onfocus="mtCommentFormOnFocus()" />
+                    </div>
+                    <div id="comment-form-email">
+                        <label for="comment-email">Email Address*</label>
+                        <input id="comment-email" name="email" size="30" value="" onfocus="mtCommentFormOnFocus()" />
+                    </div>
+                    <div id="comment-form-url">
+                        <label for="comment-url">URL</label>
+                        <input id="comment-url" name="url" size="30" value="" onfocus="mtCommentFormOnFocus()" />
+                    </div>
+                    <div id="comment-form-remember-me">
+                        <input type="checkbox" id="comment-bake-cookie" name="bakecookie" onclick="mtRememberMeOnClick(this)" value="1" accesskey="r" />
+                        <label for="comment-bake-cookie">Remember personal info?</label>
+                    </div>
+                </div>
+                <div id="comment-form-reply" style="display:none">
+                    <input type="checkbox" id="comment-reply" name="comment_reply" value="" onclick="mtSetCommentParentID()" />
+                    <label for="comment-reply" id="comment-reply-label"></label>
+                </div>
+                <div id="comments-open-text">
+                    <label for="comment-text">Comments*
+                    (You may use HTML tags for style)</label>
+                    <textarea id="comment-text" name="text" rows="15" cols="50" onfocus="mtCommentFormOnFocus()"></textarea>
+                </div>
+                <div id="comments-open-captcha"></div>
+                <div id="comments-open-footer">
+                    <input type="submit" accesskey="v" name="preview_button" id="comment-preview" value="Preview" onclick="this.form.preview.value='1';" />
+                    <input type="submit" accesskey="s" name="post" id="comment-submit" value="Submit" />
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+    <script type="text/javascript">
+    <!--
+    mtAttachEvent("load", mtEntryOnLoad);
+    mtAttachEvent("unload", mtEntryOnUnload);
+    //-->
+    </script>
+    
+
+
+</div>
+
+
+
+</div>
+			    </div>
+				
+				
+				
+					<!--Sidebar Code-->
+					<!--
+					<div class="span_4 sidebar-region">
+						<div class="region__inner">
+							<h3>Sidebar Region</h3>
+						</div>
+					</div>
+					-->
+					<!--End of Sidebar Code -->
+			  </div>
+			</div>
+		</main>
+	</div>
+<footer class="global-footer-2019">
+    <div class="footer-container">
+        <div class="footer-links-container">
+            <div class="footer-column">
+                <ul class="bare-list">
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/about/" tagid="footer-link-0-0">
+                            COMPANY
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/about/leadership/" tagid="footer-link-0-1">
+                            Leadership
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/about/company-history.jsp" tagid="footer-link-0-2">
+                            Our History
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/locations.jsp" tagid="footer-link-0-3">
+                            Locations
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="http://www.ir.akamai.com/phoenix.zhtml?c=75943&p=irol-irhome" tagid="footer-link-0-4">
+                            Investor Relations
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/about/careers/workplace-diversity.jsp" tagid="footer-link-0-5">
+                            Diversity
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/about/corporate-responsibility/" tagid="footer-link-0-6">
+                            Corporate Responsibility
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/about/compliance/" tagid="footer-link-0-7">
+                            Compliance
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/about/events/" tagid="footer-link-0-8">
+                            Events
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/partners/" tagid="footer-link-0-9">
+                            Our Partners
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul class="bare-list">
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/about/careers/" tagid="footer-link-1-0">
+                            CAREERS
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/about/careers/student-jobs-internships.jsp" tagid="footer-link-1-1">
+                            Students
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/about/careers/working-at-akamai.jsp" tagid="footer-link-1-2">
+                            Working at Akamai
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul class="bare-list">
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/about/news/" tagid="footer-link-2-0">
+                            NEWSROOM
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/about/news/media-resources.jsp" tagid="footer-link-2-1">
+                            Media Resources
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/about/news/press-contacts.jsp" tagid="footer-link-2-2">
+                            Press Contacts
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul class="bare-list">
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/resources/library.jsp" tagid="footer-link-3-0">
+                            RESOURCES
+                        </a>
+                    </li>
+					<li class="footer-list-item">
+	                     <a class="footer-link" href="/about-blog.html" target="_self" tagid="footer-link-3-1">About Blog</a>
+	                  </li>
+					   <li class="footer-list-item">
+	                     <a class="footer-link" href="/archives.html" target="_self" tagid="footer-link-3-2">Archives</a>
+	                  </li>
+					   <li class="footer-list-item">
+	                     <a class="footer-link" href="/authors.html" target="_self" tagid="footer-link-3-3">Authors</a>
+	                  </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" data-icon="external-link" data-iconpos="right" href="https://developer.akamai.com" tagid="footer-link-3-4">
+                            For Developers
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" data-icon="external-link" data-iconpos="right" href="https://community.akamai.com" tagid="footer-link-3-5">
+                            Community
+                        </a>
+                    </li>
+                  
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul class="bare-list">
+                    <li class="footer-list-item">
+                        <a class="footer-link" data-icon="facebook22" href="https://www.facebook.com/AkamaiTechnologies/" tagid="footer-link-4-0">
+                            Facebook
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" data-icon="linkedin2" href="https://www.linkedin.com/company/akamai-technologies" tagid="footer-link-4-1">
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" data-icon="twitter2" href="https://twitter.com/Akamai" tagid="footer-link-4-2">
+                            Twitter
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" data-icon="youtube-play" href="https://www.youtube.com/user/akamaitechnologies" tagid="footer-link-4-3">
+                            YouTube
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul class="bare-list">
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/about/compliance/data-protection-at-akamai.jsp" tagid="footer-link-5-0">
+                            TRUST CENTER
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="https://www.akamai.com/us/en/privacy-policies/" tagid="footer-link-5-1">
+                            Policy Details
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-disclaimer">
+            <p>
+                <span style="font-size:0.6rem; line-height:12px;">
+                    Akamai secures and delivers digital experiences for the worldâs largest companies. Akamaiâs intelligent edge platform surrounds everything, from the enterprise to the cloud, so customers and their businesses can be fast, smart, and secure. Top brands globally rely on Akamai to help them realize competitive advantage through agile solutions that extend the power of their multi-cloud architectures. Akamai keeps decisions, apps, and experiences closer to users than anyone â and attacks and threats far away. Akamaiâs portfolio of edge security, web and mobile performance, enterprise access, and video delivery solutions is supported by unmatched customer service, analytics, and 24/7/365 monitoring. To learn why the worldâs top brands trust Akamai, visit
+                    <a href="https://www.akamai.com/us/en/" title="Akamai.com">
+                        www.akamai.com
+                    </a>
+                    ,
+                    <a href="https://blogs.akamai.com/" target="_blank">
+                        blogs.akamai.com
+                    </a>
+                    , or
+                    <a href="https://twitter.com/Akamai" target="_blank">
+                        @Akamai
+                    </a>
+                    on Twitter. You can find our global contact information at
+                    <a href="https://www.akamai.com/us/en/locations.jsp" title="Akamai Locations">
+                        www.akamai.com/locations
+                    </a>
+                    . Published 09/18.
+                </span>
+            </p>
+        </div>
+        <div class="footer-copyright-links">
+            <ul class="inline-list">
+                <li>
+                    Â©2019 Akamai Technologies
+                </li>
+                <li>
+                    <a href="https://www.akamai.com/us/en/privacy-policies/" tagid="footer-legal-link-0">
+                        Privacy & Policies
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.akamai.com/us/en/privacy-policies/legal-notices.jsp" tagid="footer-legal-link-1">
+                        EMEA Legal Notices
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.akamai.com/us/en/support/" tagid="footer-legal-link-2">
+                        Support
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.akamai.com/us/en/contact-us/contact-webmaster.jsp" tagid="footer-legal-link-3">
+                        Webmaster
+                    </a>
+                </li>             
+            </ul>
+    
+        </div>
+    </div>
+</footer>
+</div>
+<script>
+    (function($, win) {
+    var numOfPageLinks = 0,
+        maxPaginationLinks = 3,
+        maxNumberOfLinksWithoutMore, pageLinksObj, activePageIndex, lastPageLink, firstPageLink, backupPageLinksObj, isMobile,
+        selectors = {
+            parent: ".pagination"
+        },
+        fnNumOfPages = function() {
+            return $(selectors.parent).children('a, span.pacurrent');
+        },
+        calc = function() {
+            var i, plusMinus, displayStartFrom, displayEndAt, iterateTo, borderFirstLink = false, borderLastLink = false;
+            if (numOfPageLinks > maxNumberOfLinksWithoutMore) {
+                if (activePageIndex < maxPaginationLinks) {
+                    displayStartFrom = 1;
+                    displayEndAt = maxPaginationLinks+1;
+                    borderFirstLink = false;
+                    borderLastLink = true;
+                } else if ((numOfPageLinks - activePageIndex) < maxPaginationLinks) {
+                    displayStartFrom = numOfPageLinks - maxPaginationLinks;
+                    displayEndAt = numOfPageLinks;
+                    borderFirstLink = true;
+                    borderLastLink = false;
+                } else {
+                    plusMinus = Math.floor(maxPaginationLinks / 2);
+                    displayStartFrom = activePageIndex - plusMinus;
+                    displayEndAt = activePageIndex + plusMinus;
+
+
+
+                    borderFirstLink = true;
+                    borderLastLink = true;
+
+                    if(isMobile){
+                        if(activePageIndex === maxPaginationLinks){
+                            borderFirstLink = false;
+                        } 
+
+                        if((numOfPageLinks - (activePageIndex - 1)) === maxPaginationLinks){
+                            borderLastLink = false;
+                        }
+                    } else {
+                        if(activePageIndex === maxPaginationLinks - 1){
+                            borderFirstLink = false;
+                        } 
+
+                        if((numOfPageLinks - activePageIndex + 1) === maxPaginationLinks){
+                            borderLastLink = false;
+                        }
+                    }
+
+                    
+                }
+                iterateTo = numOfPageLinks - 2;
+                console.log(pageLinksObj[iterateTo]);
+                //Logic
+                for (i = 1; i <= iterateTo; i++) {
+                    console.log("before" + i);
+                    if (i >= displayStartFrom-1 && i <= displayEndAt-1) {
+                        continue;
+                    }
+                    console.log("after" + i);
+                    $(pageLinksObj[i]).hide();
+                }
+
+                //add border
+                if (borderLastLink) {
+                        $(lastPageLink).addClass("borderLeft");
+                } else {
+                        $(lastPageLink).removeClass("borderLeft");
+                }
+
+                if (borderFirstLink){
+                    $(firstPageLink).addClass("borderRight");
+                } else {
+                    $(firstPageLink).removeClass("borderRight");
+                }
+            }
+        },
+        init = function() {
+            isMobile = (window.innerWidth <= 768);
+            maxPaginationLinks = isMobile ? 3 : 11;
+            maxNumberOfLinksWithoutMore = maxPaginationLinks + 1;
+            pageLinksObj = fnNumOfPages();
+            backupPageLinksObj = pageLinksObj;
+            numOfPageLinks = pageLinksObj.length;
+            activePageIndex = $(".pagination .pacurrent").index();
+            firstPageLink = $(pageLinksObj[0]);
+            lastPageLink = $(pageLinksObj[numOfPageLinks - 1]);
+            calc();
+        },
+        makeVisible = function() {
+            $(selectors.parent).css("visibility", "visible");
+        },
+        delayDisplay = function() {
+            setTimeout(makeVisible, 500);
+        },
+        reset = function() {
+            var i = 0;
+            pageLinksObj = backupPageLinksObj;
+            for (i = 0; i < pageLinksObj.length; i++) {
+                $(pageLinksObj[i]).show();
+            }
+            init();
+        };
+    $(function() {
+        init();
+        delayDisplay();
+    });
+    $(win).on('resize', reset);
+})(jQuery.noConflict(), window);
+//End of Praveen Code for Pagination
+
+//categories sub menu
+(function($, win){
+    
+    var selectors = {
+        onBody: "body",
+        menuButton: ".sub-navigation .drop-down a.sub-nav-main",
+        secMenu: ".sub-navigation .categories-menu"
+    },
+
+    closeMenu = function(){
+      $(selectors.secMenu).removeClass("open").addClass("close");
+      $(selectors.menuButton).removeClass("open").addClass("close");
+    },
+
+    toggleMenu = function(){
+      $(selectors.secMenu).toggleClass("open close");
+      $(selectors.menuButton).toggleClass("open close");
+    };
+
+    //on ready
+    $(function(){
+
+      $(selectors.onBody).on('click', function(e){
+        closeMenu();
+      });
+      $(selectors.secMenu).on('click', function(e){
+        e.stopPropagation();
+      });
+      $(selectors.menuButton).on("click", function(e){
+        e.stopPropagation();
+        toggleMenu();
+      });
+
+    });
+
+})(jQuery.noConflict(), window);
+
+
+(function($) {
+    if ($('.pacurrent').next().hasClass('next') == true) {
+        $('.next').addClass('last');
+    }
+    if ($('.pacurrent').prev().hasClass('prev') == true) {
+        $('.prev').addClass('first');
+    }
+    //To identify homepage.
+    if (window.location.pathname == "/" || window.location.pathname == "/index.html") {
+        $('body').addClass('homepage');
+    }
+    //To identify the last page or 10th page.
+    if (window.location.pathname == "/index10.html") {
+        $('body').addClass('lastpage');
+    }
+    $('.nav__items label[data-icon="search"]').click(function() {
+        var inputfield = $(this).parent().find('#st-search-input-mainnav').val();
+        if (inputfield.length != 0) {
+            $(this).parent().submit();
+        }
+    });
+    $(".primary-nav__level-one .burger-icon").on("click", function(e) {
+        if ($(this).hasClass('active')) {
+            closeNav();
+        }
+        $(this).toggleClass('active');
+        $('.menu-items').toggleClass('mobile-nav');
+        $('.nav-content').toggleClass('mobile-nav');
+        setMobileNavScroll();
+    })
+    $(".nav-overlay").hide();
+    $('.utility-nav__inner-wrapper.inner-wrapper').addClass("utility-overlay");
+    $('body').on('click', function(e) {
+        if ($('.utility-nav').find('.tab__radio').first().prop('checked')) {
+            // if user clicked outside of utility nav close it
+            if ($(e.target).closest($('.utility-nav')).length < 1) {
+                $('.utility-nav').find('.tab__radio:checked').first().prop('checked', false);
+                $('.utility-nav').find('.tab__close-tab .tab__radio:checked').first().prop('checked', true);
+            }
+        }
+        if ($('.language-selector').find('.tab__radio').first().prop('checked')) {
+            // if user clicked outside of utility nav close it
+            if ($(e.target).closest($('.language-selector')).length < 1) {
+                $('.language-selector').find('.tab__radio:checked').first().prop('checked', false);
+                $('.language-selector').find('.tab__close-tab .tab__radio:checked').first().prop('checked', true);
+            }
+        }
+    });
+
+    function setSize() {
+        var parentWidth = $('.nav-content--2').width();
+        parentWidth = parentWidth / 4;
+        parentWidth = parentWidth + 7;
+        $('.nav-content--2 > ul > li').width(parentWidth);
+    }
+
+    function windowWidth() {
+        var windowWidth = $(window).width();
+        if (windowWidth < 800) {
+            $('.controls').hide();
+            $('.four-column > li').css('width', '100%');
+        } else {
+            $('.controls').show();
+        }
+    }
+    //setSize();
+   windowWidth();
+    $(window).resize(function() {
+        //setSize();
+        windowWidth();
+    })
+    var currentVal = $('.language-selector').find("li.ui-list__item.select").attr("lang");
+    var labelName = $('.language-selector').find("li.ui-list__item.select").text();
+    $('.language-selector').find("label.tab__label").text(labelName);
+    $('.language-selector').find("li.ui-list__item").on('click', function(e) {
+        var newVal = $(e.target).attr("lang");
+        var selectLangVal = newVal;
+        newVal = "https://" + window.location.host + newVal;
+        if (newVal !== currentVal) {
+            window.location.href = newVal;
+        }
+    });
+    $('.controls .previous').on('click', function(e) {
+        $('.controls .next').removeClass('is-disabled');
+        var itemWidth = parseInt($('.four-column > li').css('width'));
+        var leftVal = parseInt($('.four-column').css('left'));
+        var finalVal = leftVal + itemWidth;
+        $('.four-column').css('left', finalVal);
+        //console.log(finalVal);
+        if (finalVal > 0 || finalVal == 0) {
+            $(this).addClass('is-disabled');
+        } else {
+            $('.controls .next').removeClass('is-disabled');
+        }
+    });
+    $('.controls .next').on('click', function(e) {
+        $('.controls .previous').removeClass('is-disabled');
+        var itemWidth = parseInt($('.four-column > li').css('width'));
+        var leftVal = parseInt($('.four-column').css('left'));
+        var finalVal = leftVal - itemWidth;
+        $('.four-column').css('left', finalVal);
+        var itemLength = $('.four-column > li').length;
+        var totalVal = itemWidth * (itemLength - 4);
+        if (totalVal == -(finalVal)) {
+            $(this).addClass('is-disabled');
+        } else {
+            $('.controls .previous').removeClass('is-disabled');
+        }
+    });
+
+    function setMobileNavScroll() {
+		var width = $(window).width();
+		var height = $(window).height();
+		height = height - 135;
+		height = height + 'px';
+		if (width <= 800) {
+			$('.nav-content div > ul').css('height', height);
+			if ($(".primary-nav__level-one .burger-icon").hasClass('active')) {
+			$('.menu-items').addClass('mobile-nav');
+			$('.nav-content').addClass('mobile-nav');
+		} else {
+		if($('.main-nav-item.search.selected').length<1){
+			closeNav();	
+		}
+		}
+		} else {
+			$('.nav-content div ul').removeAttr('style');
+			$('.menu-items').removeClass('mobile-nav');
+			$('.nav-content').removeClass('mobile-nav');
+		}
+	}
+    $(window).resize(function() {
+        setMobileNavScroll();
+    })
+    $(".primary-nav__level-one .nav__items .tab__label").on("click", function(e) {
+        //   count += 1;
+        if ($(this).hasClass('active')) { // already been clicked
+            $(this).removeClass('active'); // add one
+            closeNav();
+        } else { // first click
+            $(".primary-nav__level-one .nav__items .tab__label").removeClass('active');
+            $(this).addClass('active'); // initialize the count
+            $(".nav-overlay").show();
+        }
+    })
+    $(".nav-overlay").on("click", function(e) {
+        //   count += 1;
+        closeNav();
+    })
+    $('.tabs__single-tab.searchBox input').on("focus", function(e) {
+        closeNav();
+    });
+
+    function closeNav() {
+        window.setTimeout(function() {
+            $("#resetNav").trigger("click");
+            $(".primary-nav__level-one .nav__items .tab__label").removeClass('active');
+            $('.utility-nav__inner-wrapper.inner-wrapper').removeClass("utility-overlay");
+            $(".nav-overlay").hide();
+        }, 100);
+    }
+    $('.utility-nav__level-one .mkt-utility-main').on('click', function(e) {
+        $("#resetNav").trigger("click");
+        $(".primary-nav__level-one .nav__items .tab__label").removeClass('active');
+        $(".nav-overlay").hide();
+    });
+    var navTop = $('.hero-intro-region').offset().top;
+    var introHeight = $('.hero-intro-region').outerHeight();
+    var totalHeight = 110;
+    var navHeight;
+    var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel"; //FF doesn't recognize mousewheel as of FF3.x
+    var headerHeight = $('.hero-intro-region').outerHeight();
+    if (headerHeight < 289) $('.sticky-widgets').addClass('gray');
+    $('.sticky-visible').on('click', function(e) {
+        e.stopPropagation();
+        $(this).parent().parent().find('.focus-sticky-div').hide();
+        var hasClass = $('.primary-nav__outer-wrapper').hasClass("floater");
+        if (hasClass) {
+            navHeight = $('.primary-nav__outer-wrapper').outerHeight();
+        } else {
+            navHeight = $('.global-header').outerHeight();
+        }
+        $('.focus-sticky-div.chat').css('top', navHeight);
+        $(this).parent().find('.social-overlay').show();
+        $(this).parent().children('.focus-sticky-div').show();
+    });
+    $('.focus-sticky-div .close').on('click', function() {
+        $('.focus-sticky-div').hide();
+        $('.social-overlay').hide();
+    });
+    $('.focus-sticky-div.social').on('click', function() {
+        $('.focus-sticky-div').hide();
+    });
+    $('.social-overlay').on('click', function() {
+        $('.focus-sticky-div').hide();
+        $('.social-overlay').hide();
+    });
+    $(window).on("scroll", function() {
+        var stickyWidget = $('.sticky-widgets'),
+            scrollSticky = $(window).scrollTop();
+        if (scrollSticky >= totalHeight) {
+            stickyWidget.addClass('gray');
+            $('.focus-sticky-div.chat').css('top', headerHeight);
+        } else {
+            stickyWidget.removeClass('gray');
+            $('.focus-sticky-div.chat').css('top', megaNavHeight);
+            var headerHeight = $('.hero-intro-region').outerHeight();
+            if (headerHeight < 289) $('.sticky-widgets').addClass('gray');
+        }
+        var floaterClass = $('.primary-nav__outer-wrapper').hasClass("floater"),
+            megaNavHeight = $('.primary-nav__outer-wrapper').outerHeight(),
+            headerHeight = $('.global-header').outerHeight();
+        if (scrollSticky >= totalHeight) {
+            $('.focus-sticky-div.chat').css('top', 0);
+        } else {
+            $('.focus-sticky-div.chat').css('top', headerHeight);
+        }
+    });
+    //Mobile Search
+    $('.swiftype-header-search').find("input").on({
+        "click": function() {
+            if (!$(this).hasClass("mobile-search-input")) {
+                $(this).parents("nav").find(".nav-overlay").show();
+                $(this).parents(".searchBox").css("z-index", 999);
+                $(this).parents(".searchBox").addClass("no-hover");
+            }
+        },
+        "input": function() {
+            $(this).parent().find('form').submit();
+        }
+    });
+    $('.swiftype-header-search').find(".mobile-search-overlay").on("click", function() {
+        $(this).prev().find("label").trigger("click");
+    });
+    $(".nav-overlay").on("click", function() {
+        $(this).hide();
+        $(this).parents("nav").find(".searchBox").removeClass("no-hover").attr("style", "");
+    });
+    $('.swiftype-header-search').find("label").click(function(e) {
+        if ($(this).next().find(".st-search-input.mobile-search-input").length > 0) {
+            $(this).next().find(".st-search-input.mobile-search-input").toggleClass("active");
+            if ($(this).next().find(".st-search-input.mobile-search-input").hasClass("active")) {
+                $(this).next().find(".st-search-input.mobile-search-input").animate({
+                    "left": "0"
+                }, function() {
+                    $(this).focus();
+                })
+                $(this).parent().next().show();
+            } else {
+                $(this).next().find(".st-search-input.mobile-search-input").animate({
+                    "left": "100%"
+                })
+                $(this).parent().next().hide();
+            }
+        } else {
+            if ($(this).parent().find('input[type="search"]').val() != "") {
+                redirectToSearchResults();
+            }
+        }
+    });
+})(jQuery.noConflict());
+/*New Navigation Mar-2019*/
+(function(window){
+  var $=window.jQuery;
+  if($('.main-nav-container').hasClass("main-nav-container")){
+      var lowResCTA=$('.main-nav-container').find(".main-nav-featured .orange-cta a.button").clone(true);
+      $('.main-nav-container').find(".main-util").prepend(
+        $("<div/>").addClass('low-res-cta').append(lowResCTA)
+      );
+        
+      
+      $('.main-nav-container').find(".main-nav-item > label,.language > label").each(function(){
+        $(this).on("click",function(){
+          $('.main-nav-container').find(".main-nav-item.selected,.language.selected").not($(this).parent()).each(function(){
+            $(this).removeClass('selected');
+            $(this).find(".tab-content").hide();
+          });
+
+		   if(!$(this).parent().hasClass('orange-cta')){
+             $(this).parent().toggleClass('selected');
+          }
+		  
+          if($(this).parent().hasClass('selected')){
+            $(this).parent().find(".tab-content").show();
+          }
+          else
+            $(this).parent().find(".tab-content").hide();
+        })
+      });
+     
+      $('.main-nav-container').find(".main-nav-overlay").each(function(){
+        $(this).on("click",function(){
+          $('.main-nav-container').find(".selected").removeClass('selected');
+          $('.main-nav-container').find(".tab-content").hide();
+        });
+      });
+
+      $('.main-nav-container').find(".main-nav-featured .tab-content span.close--nav").each(function(){
+        $(this).on("click",function(){
+          $('.main-nav-container').find(".main-nav-overlay").trigger("click");
+        });
+      });
+
+
+      $("body").on("click",function(e){
+        if($(e.target).parents(".main-nav-container").length<1 && !$(e.target).hasClass('.main-nav-container')){
+          $('.main-nav-container').find(".main-nav-item.selected,.language.selected").each(function(){
+            $(this).removeClass('selected');
+            $(this).find(".tab-content").hide();
+          });
+        }
+      })
+      if($('.main-nav-container').find("input:checked").length>0){
+        $('.main-nav-container').find("input:checked").each(function(){
+          $(this).parent().addClass('selected');
+        });
+      }
+    }
+})(window);
+jQuery('body').on('click',function(){
+  if(jQuery('.focus-sticky-div.social').css('display') !== 'none'){
+       jQuery('.focus-sticky-div').hide();
+    }
+});
+jQuery('body').on('click', function(e) {
+    // check if lang sel tab is currently open
+    if (jQuery('.main-util .language').find('.tab__radio').first().prop('checked')) {
+        // if user clicked outside of lang sel tab close it
+        if (jQuery(e.target).closest(jQuery('.main-util .language')).length < 1) {
+            jQuery('.main-util .language').find('.tab__radio:checked').first().prop('checked', false);
+            jQuery('.main-util .language').find('.tab__close-tab .tab__radio:checked').first().prop('checked', true);
+        }
+    }
+    if (jQuery('.main-util .language').find("#language").length > 0 && jQuery('.main-util .language').find("#language").is(":checked") && jQuery(e.target).closest(jQuery('.main-util .language')).length < 1) {
+        jQuery('.main-util .language').find("#language")[0].checked = false;
+        jQuery('.main-util .language').removeClass('selected');
+        jQuery('.main-util .language').find(".tab-content").removeAttr('style')
+    }
+});
+/*End of New Navigation Mar-2019*/
+</script>
+
+</body>
+
+</html>
+
+00
